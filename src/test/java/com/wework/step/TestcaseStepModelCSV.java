@@ -20,21 +20,9 @@ import static org.hamcrest.Matchers.equalTo;
  * @author JJJJ
  * Description: 用例具体测试步骤
  */
-public class TestcaseStepModel {
+public class TestcaseStepModelCSV {
     // 创建testcase_yaml 文件对应属性
-    /*
-    steps:
-  - api: tokenhelper
-    action: getToken
-    actualParameter: ["ww5ef451bf006ec894","EcEIog2OJ8AtO7PDaqt_yqHKqmYXqwSZKDhyfU1aSiU"]
-    saveGlobal:
-      accesstoken: access_token
-    asserts:
-      - actual: errcode
-        matcher: equalTo
-        expect: 2
-        reason: 'getToken错误码校验！'
-     */
+
 
     private String api;
     private String action;
@@ -49,9 +37,14 @@ public class TestcaseStepModel {
     private HashMap<String,String> stepVariables = new HashMap<>();
     private ArrayList<String> finalActualParameter = new ArrayList<>();
     private ArrayList<Executable> assertList = new ArrayList<>();
+
+
     public StepResultModel run(HashMap<String,String> testcaseVariable){
+        AssertModel finalAssertModel = new AssertModel();
         // 1 先将实参中存在的占位符进行替换  时间戳
         if (actualParameter != null){
+            // 先清空再存储 避免后续测试受影响
+            finalActualParameter.clear();
             finalActualParameter.addAll(PlaceholderUtils.resolveList(actualParameter,testcaseVariable));
         }
 
@@ -62,7 +55,10 @@ public class TestcaseStepModel {
         // 先存储局部变量
         if (save != null){
             save.forEach((variableKey,path) -> {
-                stepVariables.put(variableKey,response.path(path).toString());
+                // 如果创建部门不成功 无法获取response.path(path) 所以需要先判断
+                if (response.path(path) != null){
+                    stepVariables.put(variableKey,response.path(path).toString());
+                }
             });
         }
         // 存储全局变量
@@ -75,9 +71,15 @@ public class TestcaseStepModel {
 
         // 4 封装断言列表
         if (asserts != null){
+            // 先清空assertList 否则多组数据测试时会有影响
+            assertList.clear();
             asserts.forEach(assertModel -> {
+                finalAssertModel.setActual(assertModel.getActual());
+                finalAssertModel.setMatcher(assertModel.getMatcher());
+                finalAssertModel.setReason(assertModel.getReason());
+                finalAssertModel.setExpect( PlaceholderUtils.resolveString(assertModel.getExpect(),testcaseVariable));
                 assertList.add(() -> {
-                    assertThat(assertModel.getReason(),response.path(assertModel.getActual()).toString(),equalTo(assertModel.getExpect()));
+                    assertThat(finalAssertModel.getReason(),response.path(finalAssertModel.getActual()).toString(),equalTo(finalAssertModel.getExpect()));
                 });
             });
         }

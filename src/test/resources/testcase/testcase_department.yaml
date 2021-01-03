@@ -4,7 +4,7 @@ description: 部门相关，增删改查测试用例
 steps:
   - api: tokenhelper
     action: getToken
-    actualParameter: ["ww5ef451bf006ec894","EcEIog2OJ8AtO7PDaqt_yqHKqmYXqwSZKDhyfU1aSiU"]
+    actualParameter: ["wwbcc92e0afe51b09e","MmNdXbFeCNiPJEztv1Kd1TqW6e3Gy6BBgPVRWDJa9fI"]
     saveGlobal:
       accesstoken: access_token
     asserts:

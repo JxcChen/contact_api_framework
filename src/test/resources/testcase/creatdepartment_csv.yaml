@@ -1,6 +1,7 @@
 #ApiTestCaseModel
 name: creatdepartment
 description: 初步测试创建部门用例
+csvParameter: src\test\resources\data\create_department.csv
 steps:
   - api: tokenhelper
     action: getToken
@@ -14,12 +15,12 @@ steps:
         reason: 'getToken错误码校验！'
   - api: department
     action: createDepartment
-    actualParameter: ["部门${getTimeStamp}","Department${getTimeStamp}"]
+    actualParameter: ["${csv0}","${csv1}"]
     save:
       departmentId: id
     asserts:
       - actual: errcode
         matcher: equalTo
-        expect: 2
+        expect: "${csv2}"
         reason: '创建部门校验错误码！'
 
