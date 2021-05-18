@@ -84,12 +84,11 @@ public class TestcaseStepModel {
         // 4 封装断言列表
         if (asserts != null){
             asserts.forEach(assertModel -> {
-
                 assertList.add(() -> {
                     if (assertModel.getMatcher().equals("equalTo"))
                         assertThat(assertModel.getReason(),response.path(assertModel.getActual()).toString(),equalTo(assertModel.getExpect()));
                     else if (assertModel.getMatcher().equals("containsString"))
-                        assertThat(assertModel.getReason(),assertModel.getExpect(),containsString(response.path(assertModel.getActual()).toString()));
+                        assertThat(assertModel.getReason(),response.path(assertModel.getActual()).toString(),containsString(assertModel.getExpect()));
                 });
             });
         }

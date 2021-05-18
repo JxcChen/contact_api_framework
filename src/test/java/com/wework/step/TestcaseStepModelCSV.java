@@ -96,16 +96,12 @@ public class TestcaseStepModelCSV {
                 finalAssertModel.setMatcher(assertModel.getMatcher());
                 finalAssertModel.setReason(assertModel.getReason());
                 finalAssertModel.setExpect( PlaceholderUtils.resolveString(assertModel.getExpect(),testcaseVariable));
-                if (assertModel.getMatcher().equals("equalTo")){
-                    assertList.add(() -> {
+                assertList.add(() -> {
+                    if (finalAssertModel.getMatcher().equals("equalTo"))
                         assertThat(finalAssertModel.getReason(),response.path(finalAssertModel.getActual()).toString(),equalTo(finalAssertModel.getExpect()));
-                    });
-                }
-                else if (assertModel.getMatcher().equals("containsString")){
-                    assertList.add(() -> {
+                    else if (finalAssertModel.getMatcher().equals("containsString"))
                         assertThat(finalAssertModel.getReason(),response.path(finalAssertModel.getActual()).toString(),containsString(finalAssertModel.getExpect()));
-                    });
-                }
+                });
 
             });
         }
