@@ -58,15 +58,14 @@ public class TestcaseModelCSVTest {
         ApiLoader.load("src/test/resources/api");
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = "src/test/resources/testcase";
-        Arrays.stream(new File(dirPath).list()).forEach(file ->{
-            try {
-                TestcaseModelCSV testcaseModel = TestcaseModelCSV.load(dirPath+"/"+file);
-                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+        String dirPath = "src/test/resources/testcase/creatdepartment_csv.yaml";
+        TestcaseModelCSV testcaseModel = null;
+        try {
+            testcaseModel = TestcaseModelCSV.load(dirPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
         return testcaseModels;
     }
 

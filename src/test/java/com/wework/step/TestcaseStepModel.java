@@ -4,14 +4,20 @@ package com.wework.step;
 
 import com.wework.api_object.ApiLoader;
 import com.wework.global.GlobalVariables;
+import com.wework.testcase.TestcaseModel;
+import com.wework.utils.FakeUtils;
 import com.wework.utils.PlaceholderUtils;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.function.Executable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.regex.Pattern;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
 /**
@@ -22,19 +28,6 @@ import static org.hamcrest.Matchers.equalTo;
  */
 public class TestcaseStepModel {
     // 创建testcase_yaml 文件对应属性
-    /*
-    steps:
-  - api: tokenhelper
-    action: getToken
-    actualParameter: ["ww5ef451bf006ec894","EcEIog2OJ8AtO7PDaqt_yqHKqmYXqwSZKDhyfU1aSiU"]
-    saveGlobal:
-      accesstoken: access_token
-    asserts:
-      - actual: errcode
-        matcher: equalTo
-        expect: 2
-        reason: 'getToken错误码校验！'
-     */
 
     private String api;
     private String action;
@@ -49,9 +42,24 @@ public class TestcaseStepModel {
     private HashMap<String,String> stepVariables = new HashMap<>();
     private ArrayList<String> finalActualParameter = new ArrayList<>();
     private ArrayList<Executable> assertList = new ArrayList<>();
+
+    Logger logger = LoggerFactory.getLogger(TestcaseStepModel.class);
     public StepResultModel run(HashMap<String,String> testcaseVariable){
         // 1 先将实参中存在的占位符进行替换  时间戳
         if (actualParameter != null){
+            logger.info("进行基本参数替换 时间戳 随机数");
+            for (String actualParam: actualParameter
+                 ) {
+                if (actualParam.contains("${random")){
+                    // 获取随机数位数
+                    String regex = "[^0-9]";
+                    Pattern pattern = Pattern.compile(regex);
+                    Integer len = Integer.valueOf(pattern.matcher(actualParam).replaceAll(""));
+                    String random = FakeUtils.getRandom(len);
+                    testcaseVariable.put("random"+len,random);
+                    logger.info("生成"+len+"位的随机数: "+random+"");
+                }
+            }
             finalActualParameter.addAll(PlaceholderUtils.resolveList(actualParameter,testcaseVariable));
         }
 
@@ -76,8 +84,12 @@ public class TestcaseStepModel {
         // 4 封装断言列表
         if (asserts != null){
             asserts.forEach(assertModel -> {
+
                 assertList.add(() -> {
-                    assertThat(assertModel.getReason(),response.path(assertModel.getActual()).toString(),equalTo(assertModel.getExpect()));
+                    if (assertModel.getMatcher().equals("equalTo"))
+                        assertThat(assertModel.getReason(),response.path(assertModel.getActual()).toString(),equalTo(assertModel.getExpect()));
+                    else if (assertModel.getMatcher().equals("containsString"))
+                        assertThat(assertModel.getReason(),assertModel.getExpect(),containsString(response.path(assertModel.getActual()).toString()));
                 });
             });
         }

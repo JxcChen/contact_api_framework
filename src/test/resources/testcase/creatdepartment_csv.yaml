@@ -1,17 +1,17 @@
 #ApiTestCaseModel
 name: creatdepartment
 description: 初步测试创建部门用例
-csvParameter: src\test\resources\data\create_department.csv
+csvParameter: src/test/resources/data/department_data.csv
 steps:
   - api: tokenhelper
     action: getToken
-    actualParameter: ["wwbcc92e0afe51b09e","MmNdXbFeCNiPJEztv1Kd1TqW6e3Gy6BBgPVRWDJa9fI"]
+    actualParameter: ["wwbcc92e0afe51b09e","MmNdXbFeCNiPJEztv1Kd1YLZIuhQBBiPdreyjN8mSPs"]
     saveGlobal:
       accesstoken: access_token
     asserts:
       - actual: errcode
         matcher: equalTo
-        expect: 2
+        expect: 0
         reason: 'getToken错误码校验！'
   - api: department
     action: createDepartment

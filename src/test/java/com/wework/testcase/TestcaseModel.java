@@ -53,10 +53,7 @@ public class TestcaseModel {
         logger.info("更新用例变量 新增: getTimeStamp");
         // 2、遍历step 执行run方法
         steps.forEach(step -> {
-
-
             StepResultModel stepResultModel = step.run(testcaseVariables);
-
             // 3、处理结果变量
             if (stepResultModel.getStepVariables() != null && stepResultModel.getStepVariables().size() > 0) {
                 testcaseVariables.putAll(stepResultModel.getStepVariables());

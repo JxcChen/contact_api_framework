@@ -4,14 +4,19 @@ package com.wework.step;
 
 import com.wework.api_object.ApiLoader;
 import com.wework.global.GlobalVariables;
+import com.wework.utils.FakeUtils;
 import com.wework.utils.PlaceholderUtils;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.function.Executable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.regex.Pattern;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
 /**
@@ -37,7 +42,7 @@ public class TestcaseStepModelCSV {
     private HashMap<String,String> stepVariables = new HashMap<>();
     private ArrayList<String> finalActualParameter = new ArrayList<>();
     private ArrayList<Executable> assertList = new ArrayList<>();
-
+    Logger logger = LoggerFactory.getLogger(TestcaseStepModelCSV.class);
 
     public StepResultModel run(HashMap<String,String> testcaseVariable){
         AssertModel finalAssertModel = new AssertModel();
@@ -45,6 +50,19 @@ public class TestcaseStepModelCSV {
         if (actualParameter != null){
             // 先清空再存储 避免后续测试受影响
             finalActualParameter.clear();
+            logger.info("进行基本参数替换 时间戳 随机数");
+            for (String actualParam: actualParameter
+            ) {
+                if (actualParam.contains("${random")){
+                    // 获取随机数位数
+                    String regex = "[^0-9]";
+                    Pattern pattern = Pattern.compile(regex);
+                    Integer len = Integer.valueOf(pattern.matcher(actualParam).replaceAll(""));
+                    String random = FakeUtils.getRandom(len);
+                    testcaseVariable.put("random"+len,random);
+                    logger.info("生成"+len+"位的随机数: "+random+"");
+                }
+            }
             finalActualParameter.addAll(PlaceholderUtils.resolveList(actualParameter,testcaseVariable));
         }
 
@@ -62,7 +80,7 @@ public class TestcaseStepModelCSV {
             });
         }
         // 存储全局变量
-        if (saveGlobal !=null){
+        if (saveGlobal != null){
             saveGlobal.forEach((variableKey,path) ->{
                 GlobalVariables.getGlobalVariables().put(variableKey,response.path(path).toString());
             });
@@ -78,9 +96,17 @@ public class TestcaseStepModelCSV {
                 finalAssertModel.setMatcher(assertModel.getMatcher());
                 finalAssertModel.setReason(assertModel.getReason());
                 finalAssertModel.setExpect( PlaceholderUtils.resolveString(assertModel.getExpect(),testcaseVariable));
-                assertList.add(() -> {
-                    assertThat(finalAssertModel.getReason(),response.path(finalAssertModel.getActual()).toString(),equalTo(finalAssertModel.getExpect()));
-                });
+                if (assertModel.getMatcher().equals("equalTo")){
+                    assertList.add(() -> {
+                        assertThat(finalAssertModel.getReason(),response.path(finalAssertModel.getActual()).toString(),equalTo(finalAssertModel.getExpect()));
+                    });
+                }
+                else if (assertModel.getMatcher().equals("containsString")){
+                    assertList.add(() -> {
+                        assertThat(finalAssertModel.getReason(),response.path(finalAssertModel.getActual()).toString(),containsString(finalAssertModel.getExpect()));
+                    });
+                }
+
             });
         }
         // 5 封装result
