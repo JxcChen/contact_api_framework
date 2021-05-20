@@ -1,0 +1,4 @@
+service_name,service_code,customer_type,code,reason
+abcdefg32hijc3122,213啊23,0,1,正常添加
+abcd3213i123jai13136,23123123,0,1,重复添加
+\:?”<>｜,en_name,1,-2,非法服务名称
