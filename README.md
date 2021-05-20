@@ -1,7 +1,7 @@
 # contact_api_framework
 合同管理系统接口测试框架demo
 
-- 不同文件存放路径
+- 不同文件存放路径:
 ```
 接口储存地址: src/test/resources/api
 用例储存地址: src/test/resources/testcase
