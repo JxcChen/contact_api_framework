@@ -47,12 +47,18 @@ public class ApiLoader {
      */
     public static ApiActionModel run(String apiName, String actionName){
         final ApiActionModel[] apiActionModel = new ApiActionModel[1];
+        final String[] baseUrl = new String[1];
         // 1、遍历调用ApiObjectModel激活 并根据apiName 和 actionName获取对应action执行run方法
         apiObjectModelList.stream().filter(apiObject ->apiObject.getName().equals(apiName) ).forEach(apiObjectModel -> {
             apiActionModel[0] = apiObjectModel.getActions().get(actionName);
+            baseUrl[0] = apiObjectModel.getBaseUrl();
         });
 
         if (apiActionModel[0] != null){
+            // 设置baseUrl
+            if (baseUrl[0] != null){
+                apiActionModel[0].setBaseUrl(baseUrl[0]);
+            }
             return apiActionModel[0];
         }else {
             logger.error("没有找到"+apiName+"对应的"+actionName+"action");

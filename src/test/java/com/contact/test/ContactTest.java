@@ -42,7 +42,7 @@ public class ContactTest {
     }
 
     public static ArrayList<Arguments> apiTest() throws Exception {
-        ApiLoader.load("src/test/resources/api");
+        ApiLoader.load(Constant.CMS_API_DIR);
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         ArrayList<Arguments> testcaseModels = new ArrayList<>();
         String dirPath = Constant.CUSTOMER_SERVICE_COLLECTIONS_DIR;

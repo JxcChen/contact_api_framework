@@ -31,7 +31,7 @@ public class ApiActionModel {
     private HashMap<String,String> query;
     private String get;
     private HashMap<String,String> actionVariables = new HashMap<>();
-
+    private String baseUrl;
     public Response run(ArrayList<String> actualParam, HashMap<Integer, HashMap<String, String>> queryParamList, int id){
         // 创建运行时变量
         String runBody = this.body;
@@ -45,6 +45,8 @@ public class ApiActionModel {
             runUrl = get;
             method = "get";
         }
+        // 将baseUrl 和 runUrl进行拼接 获取需要调用url
+        runUrl = CustomStrUtils.concatUrl(baseUrl,runUrl);
 
         // 对可能存在占位符的变量进行全局实参替换
         // 需要创建一个全局变量类 和 替换形参的工具类
@@ -65,6 +67,7 @@ public class ApiActionModel {
             for (int i = 0; i < formalParam.size(); i++) {
                 String param = actualParam.get(i);
                 if (param.contains("$")){
+                    System.out.println(param+"+++++++++");
                     // 需要进行实参和请求参数建的替换
                     String newParam = CustomStrUtils.replaceStr(param);
                     String[] paramSplit = newParam.split("=");
@@ -177,5 +180,11 @@ public class ApiActionModel {
         this.query = query;
     }
 
+    public String getBaseUrl() {
+        return baseUrl;
+    }
 
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
 }

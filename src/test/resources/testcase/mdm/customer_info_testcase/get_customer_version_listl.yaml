@@ -1,0 +1,14 @@
+#ApiTestCaseModel
+name: getCustomerList
+description: 获取客户List
+steps:
+  #  添加客户服务
+  - api: customerInfoService
+    action: getVersionList
+    id: 0
+    actualParameter: [ 1 ]
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 1
+        reason: '获取客户相关版本列表信息！'

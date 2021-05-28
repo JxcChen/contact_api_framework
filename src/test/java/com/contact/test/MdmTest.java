@@ -1,10 +1,10 @@
 package com.contact.test;
 
+import com.contact.api_object.ApiLoader;
 import com.contact.common.Constant;
 import com.contact.testcase.TestcaseModel;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.contact.api_object.ApiLoader;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -21,18 +21,15 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
-
 /**
- * Project: wework_api_framework_test
- * Created by JJJJ on 2021-01-02 10:53
- * Description:
+ * @author: JJJJ
+ * @date:2021/5/26 11:59
+ * @Description: TODO
  */
-
-@Epic("合同管理系统")
-@Feature("客户管理用例")
-public class CustomerServiceTest {
+@Epic("基础数据平台")
+@Feature("客户相关用例")
+public class MdmTest {
     Logger logger = LoggerFactory.getLogger(CustomerServiceTest.class);
-
 
     @Description("客户服务测试用例")
     @ParameterizedTest
@@ -47,10 +44,11 @@ public class CustomerServiceTest {
 
 
     public static ArrayList<Arguments> customerServiceTest(){
-        ApiLoader.load(Constant.CMS_API_DIR);
+        ApiLoader.load(Constant.MDM_API_DIR);
+
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = Constant.CUSTOMER_SERVICE_TESTCASE_DIR;
+        String dirPath = Constant.CUSTOMER_INFO_TESTCASE_DIR;
         Arrays.stream(new File(dirPath).list()).forEach(file ->{
             try {
                 TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);

@@ -3,7 +3,7 @@ name: customerService
 description: 客户服务测试用例
 steps:
 #  获取客户列表
-  - api: contact
+  - api: customer_service
     action: getCustomerList
     id: 1
     actualParameter: [ "","0" ]

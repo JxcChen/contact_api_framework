@@ -84,7 +84,7 @@ public class TestcaseStepModel {
             save.forEach((variableKey,path) -> {
                 // 如果创建部门不成功 无法获取response.path(path) 所以需要先判断
                 if (response.path(path) != null){
-                    stepVariables.put(variableKey,response.path(path).toString());
+                    stepVariables.put(id+"-"+variableKey,response.path(path).toString());
                 }
             });
         }

@@ -2,7 +2,7 @@
 name: customerService
 description: 获取单个客户信息
 steps:
-  - api: contact
+  - api: customer_service
     action: getCustomerServiceMsg
     id: 3
     actualParameter: [ "2566" ]

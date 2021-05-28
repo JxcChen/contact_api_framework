@@ -3,7 +3,7 @@ name: customerService
 description: 客户服务测试用例
 steps:
 #  添加客户服务
-  - api: contact
+  - api: customer_service
     action: addCustomerService
     id: 0
     actualParameter: [ "客户服务${random5}","code${getTimeStamp}","0" ]

@@ -63,4 +63,11 @@ public class CustomStrUtils {
         Integer num = Integer.valueOf(pattern.matcher(str).replaceAll(""));
         return num;
     }
+
+    public static String concatUrl(String baseUrl, String runUrl) {
+        if (!isEmpty(baseUrl)){
+            runUrl = baseUrl+runUrl;
+        }
+        return runUrl;
+    }
 }

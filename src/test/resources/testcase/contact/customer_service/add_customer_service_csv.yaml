@@ -4,7 +4,7 @@ description: 客户服务测试用例
 csvParameter: src/test/resources/data/add_customer_service_data.csv
 steps:
 #  添加客户服务
-  - api: contact
+  - api: customer_service
     action: addCustomerService
     id: 0
     actualParameter: [ "${csv0}","${csv1}","${csv2}" ]

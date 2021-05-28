@@ -17,6 +17,8 @@ import java.util.HashMap;
 public class ApiObjectModel {
     private String name;
     private HashMap<String , ApiActionModel> actions;
+    private String baseUrl;
+
 
     /**
      * 对yaml文件进行反序列化
@@ -45,4 +47,11 @@ public class ApiObjectModel {
         this.actions = actions;
     }
 
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
 }

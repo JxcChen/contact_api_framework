@@ -1,0 +1,30 @@
+# customer_Info_api.yaml
+name: customerInfoService   # api集名称
+baseUrl: http://portal-st.ienjoys.com:80
+actions:
+  # 获取单个客户详情
+  getCustomerDetail: # api名称
+    formalParam: ["id"]  # 形参 根据需要传入的形参数量和名称进行编写
+    get: /mdm/customer/detail/${id} # 请求方式及请求路径
+  # 导出客户信息
+  exportCustomer: # api名称
+    post: /mdm/customer/export
+  # 获取客户相关版本列表信息
+  getVersionList:
+    formalParam: ["customerIds"]
+    body: '{"customerIds": "${customerIds}"}'
+    post: /mdm/customer/getVersionList
+  # 获取客户分页展示列表信息
+  getCustomerList:
+    formalParam: ["current","projectCode","queryName","size"]
+    query:
+      current": ${current}
+      projectCode:  ${projectCode
+      queryName: ${queryName}
+      size: ${size}
+    get: /mdm/customer/page
+  # 停用单个客户
+  deleteCustomer: # api名称
+    formalParam: [ "id" ]  # 形参 根据需要传入的形参数量和名称进行编写
+    get: /mdm/customer/updateStatus/{id} # 请求方式及请求路径
+

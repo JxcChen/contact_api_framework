@@ -3,7 +3,7 @@ name: customerService
 description: 客户服务测试用例
 steps:
 #  添加客户服务
-  - api: contact
+  - api: customer_service
     action: addCustomerService
     id: 0
     actualParameter: [ "客户服务${random5}","code${getTimeStamp}","0" ]
@@ -13,12 +13,12 @@ steps:
         expect: 1
         reason: '新增客户服务校验！'
 #  获取客户列表
-  - api: contact
+  - api: customer_service
     action: getCustomerList
     id: 1
     actualParameter: [ "","0" ]
     save:
-      1-service_id: data.data[0].id
+      service_id: data.data[0].id
     asserts:
       - actual: code
         matcher: equalTo
@@ -29,7 +29,7 @@ steps:
         expect: "${0=service_name}"
         reason: '新增服务名称正确性校验！'
 #  查询单个客户服务信息
-  - api: contact
+  - api: customer_service
     action: getCustomerList
     id: 2
     actualParameter: [ "${0=service_name}","0" ]
@@ -43,7 +43,7 @@ steps:
         expect: "${0=service_name}"
         reason: '新增服务名称正确性校验！'
   #  通过服务订单查询单个服务详情
-  - api: contact
+  - api: customer_service
     action: getCustomerServiceMsg
     id: 3
     actualParameter: [ "${1-service_id}" ]

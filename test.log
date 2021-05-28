@@ -2025,3 +2025,561 @@
 2021-05-20 14:59:16 INFO  TestcaseStepModelCSV:58 - 更新用例变量 新增: getTimeStamp
 2021-05-20 14:59:16 INFO  TestcaseStepModelCSV:64 - 进行基本参数替换 时间戳 随机数
 2021-05-20 14:59:16 INFO  CustomerServiceTest:45 - debug
+2021-05-26 11:26:46 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-26 11:26:46 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-26 11:26:46 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-26 11:26:46 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 11:26:46 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 11:26:46 INFO  TestcaseStepModel:72 - 生成5位的随机数: 88356
+2021-05-26 11:27:38 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-26 11:27:38 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-26 11:27:38 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-26 11:27:38 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 11:27:38 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 11:27:38 INFO  TestcaseStepModel:72 - 生成5位的随机数: 57685
+2021-05-26 11:27:41 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 11:27:41 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 11:27:42 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2572}
+2021-05-26 11:27:42 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 11:27:42 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 11:27:42 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-26 11:27:42 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 11:27:42 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 11:27:42 INFO  CustomerServiceTest:41 - debug
+2021-05-26 12:42:54 INFO  CustomerServiceTest:31 - 【用例开始执行】
+2021-05-26 12:42:54 INFO  CustomerServiceTest:32 - 用例名称： getCustomerDetail
+2021-05-26 12:42:54 INFO  CustomerServiceTest:33 - 用例描述： 获取客户详情
+2021-05-26 12:42:54 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 12:42:54 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 12:42:56 INFO  CustomerServiceTest:35 - debug
+2021-05-26 12:48:04 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 12:48:04 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 12:48:04 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 12:48:04 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 12:48:04 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 12:48:04 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 12:48:04 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 12:48:04 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 12:48:04 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 12:48:48 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 12:48:48 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 12:48:48 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 12:48:48 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 12:48:51 INFO  CustomerServiceTest:38 - debug
+2021-05-26 12:48:51 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 12:48:51 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 12:48:51 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 12:48:51 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 12:48:51 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 12:48:51 INFO  CustomerServiceTest:38 - debug
+2021-05-26 14:30:59 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 14:30:59 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 14:30:59 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 14:30:59 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:31:01 INFO  CustomerServiceTest:38 - debug
+2021-05-26 14:31:02 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 14:31:02 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 14:31:02 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 14:31:02 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:31:02 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:31:02 INFO  CustomerServiceTest:38 - debug
+2021-05-26 14:32:33 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:32:33 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:32:33 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:32:33 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:32:33 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:32:33 INFO  TestcaseStepModel:72 - 生成5位的随机数: 27145
+2021-05-26 14:32:33 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:32:33 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:32:33 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:32:33 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:32:33 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:32:33 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:32:33 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:32:33 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:32:33 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:32:33 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:32:33 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:32:33 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:32:33 INFO  CustomerServiceTest:43 - 用例描述： 获取单个客户信息
+2021-05-26 14:32:33 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:32:33 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:35:35 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:35:35 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:35:35 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:35:35 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:35:35 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:35:35 INFO  TestcaseStepModel:72 - 生成5位的随机数: 81996
+2021-05-26 14:35:38 INFO  CustomerServiceTest:45 - debug
+2021-05-26 14:35:38 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:35:38 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:35:38 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:35:38 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:35:38 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:35:38 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:35:38 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:35:38 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:35:38 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:35:38 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:35:38 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:35:38 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:35:38 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:35:38 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:35:39 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2573}
+2021-05-26 14:35:39 INFO  CustomerServiceTest:45 - debug
+2021-05-26 14:35:39 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:35:39 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:35:39 INFO  CustomerServiceTest:43 - 用例描述： 获取单个客户信息
+2021-05-26 14:35:39 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:35:39 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:35:39 INFO  CustomerServiceTest:45 - debug
+2021-05-26 14:44:26 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:44:26 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:44:26 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:44:26 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:44:26 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:44:26 INFO  TestcaseStepModel:72 - 生成5位的随机数: 46091
+2021-05-26 14:44:29 INFO  CustomerServiceTest:45 - debug
+2021-05-26 14:44:29 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:44:29 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:44:29 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:44:29 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:44:29 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:44:30 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:44:30 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:44:30 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:44:30 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:44:30 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:44:30 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:44:30 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-26 14:44:30 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:44:30 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:44:30 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2574}
+2021-05-26 14:44:30 INFO  CustomerServiceTest:45 - debug
+2021-05-26 14:44:30 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-26 14:44:30 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-26 14:44:30 INFO  CustomerServiceTest:43 - 用例描述： 获取单个客户信息
+2021-05-26 14:44:30 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:44:30 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:44:30 INFO  CustomerServiceTest:45 - debug
+2021-05-26 14:44:41 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 14:44:41 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 14:44:41 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 14:44:41 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:45:57 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 14:45:57 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 14:45:57 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 14:45:57 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:46:20 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 14:46:20 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 14:46:20 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 14:46:20 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:46:20 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-26 14:46:41 INFO  CustomerServiceTest:34 - 【用例开始执行】
+2021-05-26 14:46:41 INFO  CustomerServiceTest:35 - 用例名称： getCustomerDetail
+2021-05-26 14:46:41 INFO  CustomerServiceTest:36 - 用例描述： 获取客户详情
+2021-05-26 14:46:41 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-26 14:46:41 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:25:27 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:25:27 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:25:27 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:25:27 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:25:27 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:25:27 INFO  TestcaseStepModel:72 - 生成5位的随机数: 23789
+2021-05-28 09:25:31 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:25:31 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:25:31 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2575}
+2021-05-28 09:25:31 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:25:31 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:25:31 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:25:31 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:25:31 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:25:31 INFO  CustomerServiceTest:41 - debug
+2021-05-28 09:26:00 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:26:00 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:26:00 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:26:00 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:26:00 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:26:00 INFO  TestcaseStepModel:72 - 生成5位的随机数: 79595
+2021-05-28 09:26:03 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:26:03 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:26:03 INFO  TestcaseModel:90 - 更新用例变量 新增：{service_id=2576}
+2021-05-28 09:26:03 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:26:03 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:26:03 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:26:03 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:26:03 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:26:03 INFO  PlaceholderUtils:64 - Could not resolve placeholder '1-service_id' in [${1-service_id}] 
+2021-05-28 09:27:41 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:27:41 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:27:41 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:27:41 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:27:41 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:27:41 INFO  TestcaseStepModel:72 - 生成5位的随机数: 86644
+2021-05-28 09:27:44 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:27:44 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:27:44 INFO  TestcaseModel:90 - 更新用例变量 新增：{service_id=2577}
+2021-05-28 09:27:44 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:27:44 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:27:44 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:27:44 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:27:44 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:27:44 INFO  CustomerServiceTest:41 - debug
+2021-05-28 09:29:13 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:29:13 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:29:13 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:29:13 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:29:13 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:29:13 INFO  TestcaseStepModel:72 - 生成5位的随机数: 31454
+2021-05-28 09:29:16 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:29:16 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:29:16 INFO  TestcaseModel:90 - 更新用例变量 新增：{service_id=2578}
+2021-05-28 09:29:16 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:29:16 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:29:16 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:29:16 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:29:16 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:29:16 INFO  PlaceholderUtils:64 - Could not resolve placeholder '1-service_id' in [${1-service_id}] 
+2021-05-28 09:34:23 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:34:23 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:34:23 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:34:23 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:34:23 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:34:23 INFO  TestcaseStepModel:72 - 生成5位的随机数: 81372
+2021-05-28 09:34:26 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:34:26 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:34:28 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2579}
+2021-05-28 09:34:28 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:34:28 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:34:28 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:34:28 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:34:28 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:34:29 INFO  CustomerServiceTest:41 - debug
+2021-05-28 09:37:52 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:37:52 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:37:52 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:37:52 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:37:52 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:37:52 INFO  TestcaseStepModel:72 - 生成5位的随机数: 70420
+2021-05-28 09:37:55 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:37:55 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:37:55 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2580}
+2021-05-28 09:37:55 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:37:55 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:37:55 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:37:55 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:37:55 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:37:55 INFO  CustomerServiceTest:41 - debug
+2021-05-28 09:41:59 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:41:59 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:41:59 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:41:59 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:41:59 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:41:59 INFO  TestcaseStepModel:72 - 生成5位的随机数: 70282
+2021-05-28 09:42:02 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:42:02 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:42:02 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2581}
+2021-05-28 09:42:02 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:42:02 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:42:02 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:42:02 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:42:02 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:42:02 INFO  CustomerServiceTest:41 - debug
+2021-05-28 09:42:18 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:42:18 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:42:18 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:42:18 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:42:18 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:42:18 INFO  TestcaseStepModel:72 - 生成5位的随机数: 77457
+2021-05-28 09:42:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:42:21 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:42:21 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2582}
+2021-05-28 09:42:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:42:21 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:42:21 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:42:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:42:21 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:42:21 INFO  CustomerServiceTest:41 - debug
+2021-05-28 09:47:22 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:47:22 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:47:22 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:47:22 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:47:22 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:47:22 INFO  TestcaseStepModel:72 - 生成5位的随机数: 54522
+2021-05-28 09:47:24 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:47:24 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:47:24 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2583}
+2021-05-28 09:47:24 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:47:24 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:47:24 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 09:47:25 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:47:25 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:47:25 INFO  CustomerServiceTest:41 - debug
+2021-05-28 09:47:31 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 09:47:31 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 09:47:31 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 09:47:31 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:48:01 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:48:26 INFO  TestcaseStepModel:72 - 生成5位的随机数: 81059
+2021-05-28 09:49:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:50:10 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:50:35 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2584}
+2021-05-28 09:50:35 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 09:50:53 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 09:51:20 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 10:37:28 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:37:28 INFO  CustomerServiceTest:39 - 用例名称： customerService
+2021-05-28 10:37:28 INFO  CustomerServiceTest:40 - 用例描述： 客户服务测试用例
+2021-05-28 10:37:28 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:37:28 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:37:28 INFO  TestcaseStepModel:72 - 生成5位的随机数: 16391
+2021-05-28 10:37:28 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:37:28 INFO  CustomerServiceTest:39 - 用例名称： customerService
+2021-05-28 10:37:28 INFO  CustomerServiceTest:40 - 用例描述： 客户服务测试用例
+2021-05-28 10:37:28 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:37:28 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:37:28 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:37:28 INFO  CustomerServiceTest:39 - 用例名称： customerService
+2021-05-28 10:37:28 INFO  CustomerServiceTest:40 - 用例描述： 客户服务测试用例
+2021-05-28 10:37:28 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:37:28 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:37:28 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:37:28 INFO  CustomerServiceTest:39 - 用例名称： customerService
+2021-05-28 10:37:28 INFO  CustomerServiceTest:40 - 用例描述： 获取单个客户信息
+2021-05-28 10:37:28 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:37:28 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:39:00 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:39:00 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:39:00 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:39:00 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:39:00 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:39:00 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:39:00 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:39:00 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:39:00 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:39:00 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:39:00 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:39:00 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:39:00 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:39:00 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:42:49 INFO  CustomerServiceTest:30 - 【用例开始执行】
+2021-05-28 10:42:49 INFO  CustomerServiceTest:31 - 用例名称： customerService
+2021-05-28 10:42:49 INFO  CustomerServiceTest:32 - 用例描述： 客户服务测试用例
+2021-05-28 10:42:49 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:42:49 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:43:22 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-28 10:43:22 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-28 10:43:22 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-28 10:43:22 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:43:22 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:43:22 INFO  TestcaseStepModel:72 - 生成5位的随机数: 15634
+2021-05-28 10:43:24 INFO  CustomerServiceTest:45 - debug
+2021-05-28 10:43:24 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-28 10:43:24 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-28 10:43:24 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-28 10:43:24 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:43:24 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:43:25 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:43:25 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:43:25 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:43:25 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:43:25 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-28 10:43:25 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-28 10:43:25 INFO  CustomerServiceTest:43 - 用例描述： 客户服务测试用例
+2021-05-28 10:43:25 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:43:25 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:43:25 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-1-service_id=2585}
+2021-05-28 10:43:25 INFO  CustomerServiceTest:45 - debug
+2021-05-28 10:43:25 INFO  CustomerServiceTest:41 - 【用例开始执行】
+2021-05-28 10:43:25 INFO  CustomerServiceTest:42 - 用例名称： customerService
+2021-05-28 10:43:25 INFO  CustomerServiceTest:43 - 用例描述： 获取单个客户信息
+2021-05-28 10:43:25 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:43:25 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:43:25 INFO  CustomerServiceTest:45 - debug
+2021-05-28 10:44:00 INFO  CustomerServiceTest:37 - 【用例开始执行】
+2021-05-28 10:44:00 INFO  CustomerServiceTest:38 - 用例名称： customerService
+2021-05-28 10:44:00 INFO  CustomerServiceTest:39 - 用例描述： 客户服务测试用例
+2021-05-28 10:44:00 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:44:00 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:44:00 INFO  TestcaseStepModel:72 - 生成5位的随机数: 48002
+2021-05-28 10:44:02 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:44:02 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:44:03 INFO  TestcaseModel:90 - 更新用例变量 新增：{1-service_id=2586}
+2021-05-28 10:44:03 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:44:03 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:44:03 INFO  PlaceholderUtils:64 - Could not resolve placeholder '0=service_name' in [${0=service_name}] 
+2021-05-28 10:44:03 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:44:03 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:44:03 INFO  CustomerServiceTest:41 - debug
+2021-05-28 10:45:18 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:45:18 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:45:18 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:45:18 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:45:18 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:45:18 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:45:18 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:45:18 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:45:18 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:45:18 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:45:18 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:45:18 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:45:18 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:45:18 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:45:56 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:45:56 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:45:56 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:45:56 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:45:56 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:45:56 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:45:56 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:45:56 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:45:56 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:45:56 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:45:56 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:45:56 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:45:56 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:45:56 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:48:21 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:48:21 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:48:21 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:48:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:48:21 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:48:21 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:48:21 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:48:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:48:21 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:48:22 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:48:22 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:48:22 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:48:22 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:48:22 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:49:59 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:49:59 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:49:59 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:49:59 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:49:59 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:49:59 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:49:59 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:49:59 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:49:59 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:49:59 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:49:59 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:49:59 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:49:59 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:49:59 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:50:42 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:50:42 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:50:42 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:50:42 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:50:42 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:50:42 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:50:42 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:50:42 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:50:42 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:50:42 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:50:42 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:50:42 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:50:42 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 10:50:42 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 10:53:40 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 10:53:40 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 10:53:40 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 10:53:40 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:02:21 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:02:21 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:02:21 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:02:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:02:44 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:02:44 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:02:44 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:02:44 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:02:44 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:03:05 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:03:05 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:03:05 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:03:05 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:03:05 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:03:19 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:03:19 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:03:19 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:03:19 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:03:21 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:03:21 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:03:21 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:03:21 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:03:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:03:21 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:03:21 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:03:21 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:03:21 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:03:21 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:03:21 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:03:21 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:03:50 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:03:50 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:03:50 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:03:50 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:03:51 ERROR TestcaseStepModel:130 - 获取不到实际参数值: code
+2021-05-28 11:03:51 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:03:51 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:03:51 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:03:51 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:03:51 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:03:52 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:03:52 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:03:52 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:03:52 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:03:52 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:03:52 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:03:52 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:05:52 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:05:52 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:05:52 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:05:52 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:05:54 ERROR TestcaseStepModel:130 - 获取不到实际参数值: code
+2021-05-28 11:05:54 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:05:54 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:05:54 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:05:54 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:05:54 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:05:55 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:05:55 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:05:55 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:05:55 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:05:55 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:05:55 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:05:55 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:08:27 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:08:27 INFO  CustomerServiceTest:39 - 用例名称： exportCustomerMsg
+2021-05-28 11:08:27 INFO  CustomerServiceTest:40 - 用例描述： 导出客户信息
+2021-05-28 11:08:27 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:08:29 ERROR TestcaseStepModel:130 - 获取不到实际参数值: code
+2021-05-28 11:08:29 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:08:29 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:08:29 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:08:29 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:08:29 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:08:30 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:08:30 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:08:30 INFO  CustomerServiceTest:39 - 用例名称： getCustomerList
+2021-05-28 11:08:30 INFO  CustomerServiceTest:40 - 用例描述： 获取客户List
+2021-05-28 11:08:30 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:08:30 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:08:30 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:44:55 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:44:55 INFO  CustomerServiceTest:39 - 用例名称： exportCustomerMsg
+2021-05-28 11:44:55 INFO  CustomerServiceTest:40 - 用例描述： 导出客户信息
+2021-05-28 11:44:55 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:44:57 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:44:57 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:44:57 INFO  CustomerServiceTest:39 - 用例名称： getCustomerDetail
+2021-05-28 11:44:57 INFO  CustomerServiceTest:40 - 用例描述： 获取客户详情
+2021-05-28 11:44:57 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:44:57 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:44:57 INFO  CustomerServiceTest:42 - debug
+2021-05-28 11:44:57 INFO  CustomerServiceTest:38 - 【用例开始执行】
+2021-05-28 11:44:57 INFO  CustomerServiceTest:39 - 用例名称： getCustomerList
+2021-05-28 11:44:57 INFO  CustomerServiceTest:40 - 用例描述： 获取客户List
+2021-05-28 11:44:57 INFO  TestcaseStepModel:57 - 更新用例变量 新增: getTimeStamp
+2021-05-28 11:44:57 INFO  TestcaseStepModel:63 - 进行基本参数替换 时间戳 随机数
+2021-05-28 11:44:57 INFO  CustomerServiceTest:42 - debug
