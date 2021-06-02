@@ -1,0 +1,46 @@
+name: updateProject
+description: 修改项目
+steps:
+  #  添加客户服务
+  - api: projectService
+    action: updateProject
+#       "proId" 必填,"proCode" 必填, "buildingArea","chargeArea","city",
+#       "contractType", "coveredArea", "district,
+#       "latitude", "longitude", "orgCode", "phone"",
+#       "proAddress", "proName", "proShortname",
+#       "proSource", "proType", "province", "regionalismCode",
+#       "version", "volumetricRate"
+#    actualParameter: [ "1399672538086248450","string","${random10}","${random11}","深圳市",
+#                       "03","${random9}","南山",116.313,116.313,
+#                       "00222","0755-1234567","南山科技园","深圳大学+-)asdASD${random10}",
+#                       "深圳大学+-)asdASD${random10}","05","08",
+#                       "广东","512300",0,1.55 ]
+    actualParameterMap: [
+     proId: "1399672538086248450",
+     proCode: "string",
+     buildingArea: "${random10}",
+     chargeArea: "${random11}",
+     city: "深圳市",
+     contractType: "03",
+     coveredArea: "${random9}",
+     district: "南山",
+     latitude: "116.313",
+     longitude: "116.313",
+     orgCode: "00222",
+     phone: "0755-1234567",
+     proAddress: "南山科技园",
+     proName: "深圳大学+-)asdASD${random10}",
+     proShortname: "深圳大学+-)asdASD${random10}",
+     proSource: "05",
+     proType: "08",
+     province: "广东",
+     regionalismCode: "512300",
+     version: "5",
+     volumetricRate: "1.55",
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '修改项目信息！'

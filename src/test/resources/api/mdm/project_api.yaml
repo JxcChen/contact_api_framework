@@ -1,0 +1,101 @@
+name: projectService   # api集名称
+baseUrl: http://portal-st.ienjoys.com:80
+actions:
+  # 获取单个项目详情
+  getProjectDetail: # api名称
+    query:
+      id: ${id} # 形参 根据需要传入的形参数量和名称进行编写
+    get: /mdm/project/detail/${id} # 请求方式及请求路径
+  # 获取版本号
+  getVersionList:
+    query:
+      proIds: ${proIds}
+    get: /mdm/project/getVersionList
+  # 获取版本号列表
+  getVersionSelector:
+    query:
+      type: ${type}  # type 类型 (project:项目,building:楼栋,house:房产,parkinglot:车场,parkingspace:车位)
+      code: ${code}
+    get: /mdm/project/getVerSelector
+
+  # 获取项目分页
+  getProjectPageList:
+    query:
+      contractType: ${contractType}
+      current: ${current}
+      orgCode: ${orgCode}
+      proName: ${proName}
+      proType: ${proType}
+      status: ${status}
+      size: ${size}
+    get: /mdm/project/page
+  # 添加项目
+  addProject:
+    body: '{"buildingArea": "${buildingArea}",
+            "chargeArea": "${chargeArea}",
+            "city": "${city}",
+            "contractType": "${contractType}",
+            "coveredArea": "${coveredArea}",
+            "district": "${district}",
+            "latitude": "${latitude}",
+            "longitude": ${longitude},
+            "orgCode": "${orgCode}",
+            "phone": "${phone}",
+            "proAddress": "${proAddress}",
+            "proName": "${proName}",
+            "proShortname": "${proShortname}",
+            "proSource": "${proSource}",
+            "proType": "${proType}",
+            "province": "${province}",
+            "regionalismCode": "${regionalismCode}",
+            "version": "${version}",
+            "volumetricRate": "${volumetricRate}"}'
+    headers:
+      Content-Type: application/json
+    post: /mdm/project/save
+
+  # 修改项目
+  updateProject:
+    body: '{
+               "proId":"${proId}",
+               "proCode":"${proCode}",
+               "buildingArea": "${buildingArea}",
+               "chargeArea": "${chargeArea}",
+               "city": "${city}",
+               "contractType": "${contractType}",
+               "coveredArea": "${coveredArea}",
+               "district": "${district}",
+               "latitude": "${latitude}",
+               "longitude": ${longitude},
+               "orgCode": "${orgCode}",
+               "phone": "${phone}",
+               "proAddress": "${proAddress}",
+               "proName": "${proName}",
+               "proShortname": "${proShortname}",
+               "proSource": "${proSource}",
+               "proType": "${proType}",
+               "province": "${province}",
+               "regionalismCode": "${regionalismCode}",
+               "version": ${version},
+               "volumetricRate": ${volumetricRate}
+             }'
+    headers:
+      Content-Type: application/json
+    post: /mdm/project/update
+
+  # 修改项目状态  启用/停用
+  changeProjectStatus:
+    query:
+      id: ${id},
+      status: ${status}
+
+    post: /mdm/project/updateStatus/${id}
+
+  # 批量导入项目信息
+  uploadProject:
+    filePath: "${filePath}" # 需要上传文件 文件路径 必传
+    query:
+      type: ${type} # 上传数据类型 必填  楼栋:building  房屋:house  车位:parkingspace
+    headers:
+      content-type: multipart/form-data
+    post: /mdm/project/import

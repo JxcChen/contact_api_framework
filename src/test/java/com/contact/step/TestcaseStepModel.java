@@ -4,10 +4,7 @@ package com.contact.step;
 
 import com.contact.api_object.ApiLoader;
 import com.contact.global.GlobalVariables;
-import com.contact.utils.AssertUtils;
-import com.contact.utils.CustomStrUtils;
-import com.contact.utils.FakeUtils;
-import com.contact.utils.PlaceholderUtils;
+import com.contact.utils.*;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.function.Executable;
 import org.slf4j.Logger;
@@ -33,6 +30,7 @@ public class TestcaseStepModel {
     private String api;
     private String action;
     private ArrayList<String> actualParameter;
+    private  ArrayList<HashMap<String,String>> actualParameterMap;
     private HashMap<String,String> save;
     private HashMap<String,String> saveGlobal;
     // 需要创建assertModel
@@ -55,7 +53,18 @@ public class TestcaseStepModel {
         // 1、更新用例变量  时间戳
         testcaseVariable.put("getTimeStamp", FakeUtils.getTimeMillis());
         logger.info("更新用例变量 新增: getTimeStamp");
-
+        // 为应变两种形式的实际参数 实参有可能是list或者map形式
+        // 如果是为map形式就将map的值添加到list中进行统一处理
+        if (actualParameterMap != null && actualParameterMap.size()>0){
+            if (actualParameter == null){
+                actualParameter = new ArrayList<>();
+            }
+            actualParameterMap.forEach(map -> {
+                map.forEach((key,value)->{
+                    actualParameter.add(value);
+                });
+            });
+        }
         // 1 先将实参中存在的占位符进行替换  时间戳
         if (actualParameter != null){
             // 先清空再存储 避免后续测试受影响
@@ -131,21 +140,15 @@ public class TestcaseStepModel {
                     throw e;
                 }
                 // 添加断言列表
-                assertList.add(() -> {
-                    if (finalAssertModel.getMatcher().equals("equalTo")) {
-                        assertThat(finalAssertModel.getReason(), response.path(finalAssertModel.getActual()).toString(), equalTo(finalAssertModel.getExpect()));
-                    }else if (finalAssertModel.getMatcher().equals("containsString"))
-                        assertThat(finalAssertModel.getReason(),response.path(finalAssertModel.getActual()).toString(),containsString(finalAssertModel.getExpect()));
-                });
-
+                AssertUtils.setAssertList(assertList,response,finalAssertModel);
             });
         }
         // 5 封装result
-        stepResultModel.setAssertList(assertList);
-        stepResultModel.setStepVariables(stepVariables);
-        stepResultModel.setResponse(response);
+        StepResultsUtils.setStepResults(stepResultModel,assertList,stepVariables,response);
         return stepResultModel;
     }
+
+
 
 
     public int getId() {
@@ -201,5 +204,13 @@ public class TestcaseStepModel {
 
     public void setAsserts(ArrayList<AssertModel> asserts) {
         this.asserts = asserts;
+    }
+
+    public ArrayList<HashMap<String, String>> getActualParameterMap() {
+        return actualParameterMap;
+    }
+
+    public void setActualParameterMap(ArrayList<HashMap<String, String>> actualParameterMap) {
+        this.actualParameterMap = actualParameterMap;
     }
 }

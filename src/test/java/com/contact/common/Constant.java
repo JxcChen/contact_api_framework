@@ -33,4 +33,9 @@ public class Constant {
      * 客户相关接口测试用例
      */
     public static final String CUSTOMER_INFO_TESTCASE_DIR = "src/test/resources/testcase/mdm/customer_info_testcase";
+
+    /**
+     * 项目相关接口测试用例
+     */
+    public static final String PROJECT_TESTCASE_DIR = "src/test/resources/testcase/mdm/project";
 }

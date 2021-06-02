@@ -18,8 +18,8 @@ actions:
   getCustomerList:
     formalParam: ["current","projectCode","queryName","size"]
     query:
-      current": ${current}
-      projectCode:  ${projectCode
+      current: ${current}
+      projectCode:  ${projectCode}
       queryName: ${queryName}
       size: ${size}
     get: /mdm/customer/page

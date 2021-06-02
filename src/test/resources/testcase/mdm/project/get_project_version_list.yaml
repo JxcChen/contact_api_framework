@@ -1,0 +1,13 @@
+name: getVersionList
+description: 获取项目版本列表
+steps:
+  #  添加客户服务
+  - api: projectService
+    action: getVersionList
+    actualParameter: [ 1399287808341839874 ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取项目版本列表校验！'

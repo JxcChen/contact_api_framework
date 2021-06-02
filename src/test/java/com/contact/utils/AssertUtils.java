@@ -1,9 +1,17 @@
 package com.contact.utils;
 
 import com.contact.step.AssertExpectModel;
+import com.contact.step.AssertModel;
+import io.restassured.response.Response;
+import org.junit.jupiter.api.function.Executable;
 import org.slf4j.Logger;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
 
 
 /**
@@ -176,5 +184,20 @@ public class AssertUtils {
             actualExpect = getCalculatorResult(num1,num2,expectModel.getOperator()).toString();
         }
         return actualExpect;
+    }
+
+    /**
+     * 封装断言方式
+     * @param assertList 断言列表
+     * @param response 请求响应对象
+     * @param assertModel 断言对象
+     */
+    public static void setAssertList(ArrayList<Executable> assertList, Response response, AssertModel assertModel) {
+        assertList.add(() -> {
+            if (assertModel.getMatcher().equals("equalTo")) {
+                assertThat(assertModel.getReason(), response.path(assertModel.getActual()).toString(), equalTo(assertModel.getExpect()));
+            }else if (assertModel.getMatcher().equals("containsString"))
+                assertThat(assertModel.getReason(), response.path(assertModel.getActual()).toString(),containsString(assertModel.getExpect()));
+        });
     }
 }

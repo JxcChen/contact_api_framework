@@ -1,0 +1,13 @@
+name: getProjectPage
+description: 获取项目分页数据
+steps:
+  #  添加项目分页数据
+  - api: projectService
+    action: getProjectPageList
+    actualParameter: [ "","","","","","","" ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 1
+        reason: '获取分页数据！'

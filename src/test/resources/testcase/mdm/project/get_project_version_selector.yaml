@@ -1,0 +1,13 @@
+name: getVersionSelector
+description: 项目信息版本对比
+steps:
+  #  添加客户服务
+  - api: projectService
+    action: getVersionSelector
+    actualParameter: [ "project","CAD1" ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '项目信息版本对比！'

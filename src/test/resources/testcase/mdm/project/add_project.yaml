@@ -1,0 +1,17 @@
+name: addProject
+description: 添加项目
+steps:
+  #  添加客户服务
+  - api: projectService
+    action: addProject
+    actualParameter: [ "${random10}","${random11}","深圳市",
+                       "03","${random9}","南山",116.313,116.313,
+                       "00222","0755-1234567","南山科技园","深圳大学+-)asdASD${random10}",
+                       "深圳大学+-)asdASD${random10}","05","08",
+                       "广东","512300",0,1.55 ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '添加项目校验！'

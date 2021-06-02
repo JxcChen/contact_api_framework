@@ -1,4 +1,3 @@
-#ApiTestCaseModel
 name: exportCustomerMsg
 description: 导出客户信息
 steps:
