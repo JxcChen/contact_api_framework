@@ -1,0 +1,15 @@
+name: getCustListCase
+description: 获获取房屋下的所有客户列表测试用例
+steps:
+  #  获取房产详情
+  - api: houseService
+    action: getCustList
+    actualParameterMap: [
+        houseId: CAD120210301000004010B1001 # 房产id
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取房产详情基本检验！'

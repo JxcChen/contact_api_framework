@@ -1,0 +1,10 @@
+name: menuService   # 菜单相关接口
+baseUrl: http://portal-st.ienjoys.com:80/api
+actions:
+  # 返回当前用户的树形菜单集合
+  getMenu:
+    query: [
+      parentId: "${parentId}",    # 父id
+      tenantId: "${tenantId}"     # 租户id
+    ]
+    get: /api/mdm/menu

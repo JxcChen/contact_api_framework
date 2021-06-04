@@ -1,0 +1,15 @@
+name: getCustListCase
+description: 获取车位下所有客户列表测试用例
+steps:
+  #  获取车位下所有客户列表
+  - api: parkingSpaceService
+    action: getCustList
+    actualParameterMap: [
+        psCode: SPU00000000051230000000044 # 车位编号
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取房产详情基本检验！'

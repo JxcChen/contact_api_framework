@@ -1,0 +1,14 @@
+#ApiTestCaseModel
+name: changeCustomerStatus
+description: 修改客户状态
+steps:
+  #  添加客户服务
+  - api: customerInfoService
+    action: updateStatus
+    id: 0
+    actualParameter: [ 1,01 ]
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '修改客户状态！'

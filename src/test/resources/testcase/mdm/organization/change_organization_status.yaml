@@ -1,0 +1,16 @@
+name: changeStatusCase
+description: 修改组织状态
+steps:
+  #  获取房产详情
+  - api: organizationService
+    action: updateStatus
+    actualParameterMap: [
+        id: "1400657314280640514",        # 房产id *
+        status: "01"   # 组织状态 *
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '修改组织状态基本检验！'

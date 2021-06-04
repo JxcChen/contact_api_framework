@@ -1,0 +1,90 @@
+name: organizationService   # api集名称
+baseUrl: http://portal-st.ienjoys.com:80
+actions:
+  # 获取组织详情
+  getDetail:
+    query: [
+      id: "${id}" # 组织id *
+    ]
+    get: /api/mdm/org/detail/${id}
+
+  # 根据组织类型获取上级组织
+  getParentOrg:
+    query: [
+        orgType: "${orgType}",     # 组织机构类型 *
+        tenantId : "${tenantId}"  # 租户id *
+    ]
+    get: /api/mdm/org/getParentOrgByType
+
+  # 获取组织机构版本列表信息
+  getVersionList:
+    query: [
+        orgIds: "${orgIds}"
+    ]
+    post: /api/mdm/org/getVersionList
+
+  # 新增组织
+  addOrganization:
+#     "address"        详细地址
+#     "city"           所在城市
+#     "latitude"       纬度
+#     "longitude"      经度
+#     "orgCode"        组织编码
+#     "orgName"        组织名称
+#     "orgParentCode"  上级组织编码
+#     "orgParentId"    上级组织id
+#     "orgParentName"  上级组织名称
+#     "orgShortName"   组织简称
+#     "orgType"        组织类型名称 00集团01下属物业公司02城市公司03片区04服务中心05职能部门
+#     "phone"          电话
+#     "regionCode"     所在地区code
+#     "version"        版本号
+    body: '{
+       "address": "${address}",
+       "city": "${city}",
+       "latitude": "${latitude}",
+       "longitude": "${longitude}",
+       "orgName": "${orgName}",
+       "orgParentCode": "${orgParentCode}",
+       "orgParentId": "${orgParentId}",
+       "orgParentName": "${orgParentName}",
+       "orgShortName": "${orgShortName}",
+       "orgType": "${orgType}",
+       "phone": "${phone}",
+       "regionCode": "${regionCode}",
+       "version": "${version}"
+     }'
+    headers:
+      content-type: application/json
+    post: /api/mdm/org/save
+
+  # 编辑组织
+  updateOrganization:
+    body: '{
+       "orgId": "${orgId}",
+       "orgCode": "${orgCOde}",
+       "address": "${address}",
+       "city": "${city}",
+       "latitude": "${latitude}",
+       "longitude": "${longitude}",
+       "orgName": "${orgName}",
+       "orgParentCode": "${orgParentCode}",
+       "orgParentId": "${orgParentId}",
+       "orgParentName": "${orgParentName}",
+       "orgShortName": "${orgShortName}",
+       "orgType": "${orgType}",
+       "phone": "${phone}",
+       "regionCode": "${regionCode}",
+       "version": "${version}"
+     }'
+    headers:
+      content-type: application/json
+    post: /api/mdm/org/update
+
+  # 修改组织状态
+  updateStatus:
+    query: [
+      id: "${id}",         # 组织id *
+      status: "${status}"  # 组织状态 * 00:正常 01:停用
+    ]
+    get: /api/mdm/org/updateStatus/${id}

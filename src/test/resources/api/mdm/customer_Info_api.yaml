@@ -1,30 +1,36 @@
 # customer_Info_api.yaml
 name: customerInfoService   # api集名称
-baseUrl: http://portal-st.ienjoys.com:80
+baseUrl: http://portal-st.ienjoys.com:80/api
 actions:
   # 获取单个客户详情
   getCustomerDetail: # api名称
-    formalParam: ["id"]  # 形参 根据需要传入的形参数量和名称进行编写
+    formalParam: ["id"]  # 客户id*
     get: /mdm/customer/detail/${id} # 请求方式及请求路径
-  # 导出客户信息
-  exportCustomer: # api名称
-    post: /mdm/customer/export
+
+#  # 导出客户信息
+#  exportCustomer: # api名称
+#    post: /mdm/customer/export
+
   # 获取客户相关版本列表信息
   getVersionList:
-    formalParam: ["customerIds"]
-    body: '{"customerIds": "${customerIds}"}'
+    body: '{"customerIds": "${customerIds}"}' # 客户id *
     post: /mdm/customer/getVersionList
+
   # 获取客户分页展示列表信息
   getCustomerList:
-    formalParam: ["current","projectCode","queryName","size"]
-    query:
-      current: ${current}
-      projectCode:  ${projectCode}
-      queryName: ${queryName}
-      size: ${size}
+    query: [
+      current: "${current}",            # 当前页面
+      projectCode:  "${projectCode}",   # 项目code
+      queryName: "${queryName}",        # 要查询的 客户名称
+      size: "${size}"                   # 每页显示数量
+    ]
     get: /mdm/customer/page
-  # 停用单个客户
-  deleteCustomer: # api名称
-    formalParam: [ "id" ]  # 形参 根据需要传入的形参数量和名称进行编写
-    get: /mdm/customer/updateStatus/{id} # 请求方式及请求路径
+
+  # 修改客户状态
+  updateStatus: # api名称
+    query: [
+      id: "${id}",          # 客户id *
+      status: "${status}"   # 需要修改的状态  00:正常  01:停用
+    ]
+    get: /mdm/customer/updateStatus/${id}
 

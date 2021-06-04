@@ -4,11 +4,27 @@ steps:
   #  添加客户服务
   - api: projectService
     action: addProject
-    actualParameter: [ "${random10}","${random11}","深圳市",
-                       "03","${random9}","南山",116.313,116.313,
-                       "00222","0755-1234567","南山科技园","深圳大学+-)asdASD${random10}",
-                       "深圳大学+-)asdASD${random10}","05","08",
-                       "广东","512300",0,1.55 ]
+    actualParameterMap: [
+        buildingArea: "10000000000",
+        chargeArea: "999999999.99",
+        city: "深圳市",
+        contractType: "03",
+        coveredArea: "999999999.99",
+        district: "南山",
+        latitude: "116.313",
+        longitude: "116.313",
+        orgCode: "U0000000003",
+        phone: "0755-1234567",
+        proAddress: "南山科技园",
+        proName: "深圳湾金地分湾",
+        proShortname: "金地湾",
+        proSource: "05",
+        proType: "08",
+        province: "广东",
+        regionalismCode: "444403",
+        version: "0",
+        volumetricRate: "1.55"
+    ]
     id: 0
     asserts:
       - actual: code

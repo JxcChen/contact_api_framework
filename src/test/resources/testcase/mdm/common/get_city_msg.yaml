@@ -1,0 +1,11 @@
+name: getAllCityTreeSelectorCase
+description: 获取城市下拉框数据
+steps:
+  #  获取城市下拉框数据
+  - api: commonService
+    action: getAllCityTreeSelector
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取城市下拉框数据基本校验！'

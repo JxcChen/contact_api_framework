@@ -4,10 +4,10 @@ steps:
   #  添加项目分页数据
   - api: projectService
     action: getProjectPageList
-    actualParameter: [ "","","","","","","" ]
+    actualParameter: [ "null","null","null","null","null","null","null" ]
     id: 0
     asserts:
       - actual: code
         matcher: equalTo
-        expect: 1
+        expect: 0
         reason: '获取分页数据！'

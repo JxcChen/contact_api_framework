@@ -1,0 +1,31 @@
+#ApiTestCaseModel
+name: importDataCase
+description: 批量导入数据测试用例
+steps:
+  #  上传文件数据
+  - api: commonService
+    action: uploadFile
+    id: 0
+    actualParameter: [ "filePath=C:\\Users\\chenjinxuan1\\Desktop\\基础数据平台\\楼栋上传模板.xlsx",building ]
+    save:
+      path: result.path
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 10000
+        reason: '上传文件数据基本校验！'
+
+  - api: commonService
+    action: basicUpload
+    id: 0
+    actualParameterMap: [
+        fileExcelPath: "${0-path}",    # 上传数据中的返回的fileExcelPath *
+        projectCode: "PU000013512311000003",        # 项目code *
+        type: "${0=type}"                       # 上传类型 *
+    ]
+
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 10000
+        reason: '上传文件数据基本校验！'

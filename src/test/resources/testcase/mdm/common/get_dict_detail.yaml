@@ -1,0 +1,14 @@
+name: getDictDetailCase
+description: 获取枚举下拉列表用例
+steps:
+  #  获取枚举下拉列表
+  - api: commonService
+    action: getdictDetail
+    actualParameterMap: [
+        actualParameterMap: "项目来源",      # 枚举类型名称 *
+    ]
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取枚举下拉列表基本校验！'

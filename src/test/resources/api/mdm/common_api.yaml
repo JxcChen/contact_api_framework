@@ -1,0 +1,89 @@
+name: commonService   # api集名称
+baseUrl: http://portal-st.ienjoys.com:80/api
+actions:
+  # 1 上传数据文件
+  uploadFile:
+    filePath: ${filePath}  # 文件路径 *
+    query: [
+      file: "${file}",
+      type: "${type}"     # 上传类型 * building:楼栋、unit:单元、floor：楼层、house:房屋
+    ]
+    headers:
+      Content-Type: multipart/form-data;charset=UTF-8
+    post: /mdm/common/uploadFile
+
+  # 2 将所上传的文件`导入临时库
+  basicUpload:
+#   "fileExcelPath" # 上传数据中的返回的fileExcelPath *
+#   "projectCode"   # 项目code *
+#   "type"          # 上传类型 *
+    body: '{
+      "fileExcelPath": "${fileExcelPath}",
+      "projectCode": "${projectCode}",
+      "type": "${type}"
+    }'
+    headers:
+      content-type: application/json
+    post: /mdm/common/basicUpload
+
+  # 3 提交临时数据
+  submitUpload:
+    #   "account"              # 将上传数据导入到临时库时返回的account *
+    #   "fileExcelPath"        # 上传数据中的返回的fileExcelPath *
+    #   "projectCode"          # 项目code *
+    #   "type"                 # 上传类型 *
+    #   "uploadCode"           # 将上传数据导入到临时库时返回的uploadCode *
+    body: '{
+      "account": "${account}",
+      "fileExcelPath": "${fileExcelPath}",
+      "projectCode": "${projectCode}",
+      "type": "${type}",
+      "uploadCode": "${uploadCode}"
+    }'
+    headers:
+      content-type: application/json
+    post: /mdm/common/submitUpload
+
+  # 4 取消上传数据
+  cancelUpload:
+#   "account"              # 将上传数据导入到临时库时返回的account *
+#   "fileExcelPath"        # 上传数据中的返回的fileExcelPath *
+#   "projectCode"          # 项目code *
+#   "type"                 # 上传类型 *
+#   "uploadCode"           # 将上传数据导入到临时库时返回的uploadCode *
+    body: '{
+      "account": "${account}",
+      "fileExcelPath": "${fileExcelPath}",
+      "projectCode": "${projectCode}",
+      "type": "${type}",
+      "uploadCode": "${uploadCode}"
+    }'
+    post: /mdm/common/cancelUpload
+
+  # 5 获取枚举下拉列表
+  getdictDetail:
+    query: [
+      dictName : "${dictName}",      # 枚举类型名称 *
+    ]
+    get: /mdm/common/dictDetail
+
+  # 6 获取城市下拉框数据
+  getAllCityTreeSelector:
+    post: /mdm/common/getAllCityTreeSelector
+
+  # 7 获取组织数据树
+  getAllOrgTree:
+    post: /mdm/common/getAllOrgTree
+
+  # 8 获取平级省市区下拉框
+  getSelector:
+    body: '{
+      "cityId": "${cityId}",
+      "code": "${code}",
+      "level": "${level}",
+      "projectCode": "${projectCode}",
+      "projectName": "${projectName}"
+    }'
+    headers:
+      content-type: application/json
+    post: /mdm/common/getSelector

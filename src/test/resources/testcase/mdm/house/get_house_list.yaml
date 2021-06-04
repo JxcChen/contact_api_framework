@@ -1,0 +1,79 @@
+name: getHouseListCase
+description: 获取房产列表测试用例
+steps:
+  #  获取项目楼栋信息
+  - api: houseService
+    action: getHouseList
+    actualParameterMap: [
+        bldCode: "null",          # 楼栋编码
+        floor: "null",            # 楼层
+        houseCode: "null",        # 房屋编码
+        proCode: "PU0000135123000000",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
+        type: "building",             # building:楼栋、unit:单元、floor：楼层、house:房屋
+        unit: "null"              # 单元
+    ]
+    save:
+      bldCode: data[0].bldCode
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取项目楼栋信息校验！'
+  # 获取楼栋单元信息
+  - api: houseService
+    action: getHouseList
+    actualParameterMap: [
+        bldCode: "${0-bldCode}",          # 楼栋编码
+        floor: "null",            # 楼层
+        houseCode: "null",        # 房屋编码
+        proCode: "${0=proCode}",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
+        type: "unit",             # building:楼栋、unit:单元、floor：楼层、house:房屋
+        unit: "null"              # 单元
+    ]
+    save:
+      unit: data[0].unit
+    id: 1
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取楼栋单元信息校验！'
+  # 获取单元楼层信息
+  - api: houseService
+    action: getHouseList
+    actualParameterMap: [
+        bldCode: "${0-bldCode}",          # 楼栋编码
+        floor: "null",            # 楼层
+        houseCode: "null",        # 房屋编码
+        proCode: "${0=proCode}",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
+        type: "floor",             # building:楼栋、unit:单元、floor：楼层、house:房屋
+        unit: "${1-unit}"              # 单元
+    ]
+    save:
+      floor: data[0].floor
+    id: 2
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取单元楼层信息校验！'
+  # 获取楼层房屋信息
+  - api: houseService
+    action: getHouseList
+    actualParameterMap: [
+        bldCode: "${0-bldCode}",          # 楼栋编码
+        floor: "${2-floor}",            # 楼层
+        houseCode: "null",        # 房屋编码
+        proCode: "${0=proCode}",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
+        type: "house",             # building:楼栋、unit:单元、floor：楼层、house:房屋
+        unit: "${1-unit}"              # 单元
+    ]
+    save:
+      unit: data[0].floor
+    id: 3
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取楼层房屋信息校验！'

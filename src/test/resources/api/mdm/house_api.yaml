@@ -1,0 +1,73 @@
+name: houseService   # api集名称
+baseUrl: http://portal-st.ienjoys.com:80/api
+actions:
+  # 获获取房屋下的所有客户列表
+  getCustList:
+    query: [
+      houseCode: "${houseCode}" # 房屋编码 *
+    ]
+    get: /mdm/house/custList
+  # 获取房屋详情
+  getHouseDetail:
+    query: [
+      id: "${id}"
+    ]
+    get: /mdm/house/detail/${id}
+  # 导出房屋数据报表
+  exportHouseData:
+#   "bldCode"   # 楼栋编码
+#   "floor"     # 楼层
+#   "houseCode" # 房屋编码
+#   "proCode"   # 项目编号
+#   "type"      # building:楼栋、unit:单元、floor：楼层、house:房屋
+#   "unit"
+    body: '{
+             "bldCode": "${bldCode}",
+             "floor": "${floor}",
+             "houseCode": "${houseCode}",
+             "proCode": "${proCode}",
+             "type": "${type}",
+             "unit": "${unit}"
+           }'
+    headers:
+      content-type: application/json
+    post: /mdm/house/exportHouseDataReport
+
+  # 房产信息对比
+  getVersionList:
+    query: [
+      houseIds: "${houseIds}"  # 房产id *  可以传多个
+    ]
+    get: /mdm/house/getVersionList
+
+  # 禅熏楼栋信息列表
+  getHouseList:
+    query: [
+      bldCode: "${bldCode}",      # 楼栋编码
+      floor: "${floor}",          # 楼层
+      houseCode: "${houseCode}",  # 房屋编码
+      proCode: "${proCode}",      # 项目编码
+      type: "${type}",            # 类型
+      unit: "${unit}" ,           # 单元
+    ]
+    get: /mdm/house/list
+
+  # 修改房产状态  启用/停用
+  changeHouseStatus:
+    query: [
+      id: "${id}",        # 房产id *
+      status: "${status}" # 房产状态 *
+    ]
+    post: /mdm/house/updateStatus/${id}
+
+  # 批量导入房产信息
+  uploadHouse:
+    filePath: "${filePath}" # 需要上传文件 文件路径 必传
+    query: [
+      file: "${file}",
+      type: "${type}" # 上传数据类型 必填  楼栋:building  房屋:house  车位:parkingspace
+    ]
+    headers:
+      content-type: multipart/form-data
+    post: /mdm/house/import
+

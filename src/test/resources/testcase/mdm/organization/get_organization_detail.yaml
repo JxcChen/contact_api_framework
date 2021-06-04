@@ -1,0 +1,19 @@
+name: getOrgDetailCase
+description: 获取组织详情
+steps:
+  #  获取组织详情
+  - api: organizationService
+    action: getDetail
+    actualParameterMap: [
+        id: "1400365942990442498" # 组织id
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取组织详情基本检验！'
+      - actual: data.id
+        matcher: equalTo
+        expect: 1400365942990442498
+        reason: '获取组织详情  id校验！'

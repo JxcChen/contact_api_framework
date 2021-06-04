@@ -4,7 +4,7 @@ steps:
   #  添加客户服务
   - api: projectService
     action: getProjectDetail
-    actualParameter: [ 1 ]
+    actualParameter: [ 1400367017147502593 ]
     id: 0
     asserts:
       - actual: code

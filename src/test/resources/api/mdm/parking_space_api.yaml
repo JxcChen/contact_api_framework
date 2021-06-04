@@ -1,0 +1,132 @@
+name: parkingSpaceService   # 停车场相关集合
+baseUrl: http://portal-st.ienjoys.com:80
+actions:
+  # 获取车位下所有客户列表
+  getCustList:
+    query: [
+        psCode: "${psCode}" # 车位编号 *
+    ]
+    get: /api/mdm/parking/custList
+
+  # 停车场信息版本对比
+  getVersionList:
+    query: [
+        lotIds : "${lotIds }"  # 车场编号 * 可以多个 用,隔开
+    ]
+    get: /api/mdm/parking/lot/getVersionList
+
+  # 批量导入停车场信息
+  importParkingLot:
+    filePath: "${filePath}" # 需要上传文件 文件路径 必传
+    query: [
+        file: "${file}", # 数据文件 *
+        type: "${type}"  # 上传数据类型 *  楼栋:building  房屋:house  车位:parkingspace
+    ]
+    headers:
+      content-type: multipart/form-data
+    post: /api/mdm/parking/lot/import
+
+  # 获取车场信息列表
+  getParkingLotlist:
+    query: [
+        proCode: "${proCode}"  # 车场编码 *
+    ]
+    get: /api/mdm/parking/lot/list
+
+  # 新增车场
+  addParkingLot:
+    query: [
+      takeoverDate: "${takeoverDate}",      # 交付日期
+      plSeqCode : "${plSeqCode }",          # 车场顺序码 *
+      plName : "${plName }",                # 车场名称 *
+      proCode: "${proCode}"                 # 项目编码 *
+    ]
+    get: /api/mdm/parking/lot/save
+
+  # 编辑车场
+  updateParkingLot:
+    query: [
+        createBy: "${createBy}",      # 交付日期
+        createDate: "${createDate }",          # 车场顺序码 *
+        id: "${id }",                # 车场名称 *
+        modifyBy: "${modifyBy}",                 # 项目编码 *
+        modifyDate: "${modifyDate}",      # 交付日期
+        orgCode: "${orgCode }",          # 车场顺序码 *
+        plCode: "${plCode }",                # 车场名称 *
+        plName: "${plName}",                 # 项目编码 *
+        plSeqCode: "${plSeqCode}",      # 交付日期
+        proCode: "${proCode }",          # 车场顺序码 *
+        status: "${status }",                # 车场名称 *
+        takeoverDate: "${takeoverDate}",                 # 项目编码 *
+        tenantId: "${tenantId}",          # 车场顺序码 *
+        totalParkings: "${totalParkings}",                # 车场名称 *
+        version: "${version}",                 # 项目编码 *
+    ]
+    get: /api/mdm/parking/lot/update
+
+  # 修改车场状态  启用/停用
+  changeLotStatus:
+    query: [
+      id: "${id}",        # 房产id *
+      status: "${status}" # 房产状态 *
+    ]
+    post: /api/mdm/parking/lot/updateStatus/{id}
+
+
+
+  # 获取车位详情
+  getSpaceDetail:
+    query: [
+        id: "${id}"        # 车位id *
+    ]
+    get: /api/mdm/parking/space/detail/{id}
+
+  # 车位信息对比
+  getSpaceContrast:
+    query: [
+        spaceIds: "${spaceIds }"  # 车位id *  可以传多个
+    ]
+    get: /api/mdm/parking/space/contrast
+
+  # 导出车位数据报告
+  exportDataReport:
+    query: [
+        proCode: "${proCode}",      # 项目code
+        psArea: "${psArea}",        # 车位所属区域 *
+        psName: "${psName}",        # 车位名称关键字 *
+        status: "${status}"         # 车位状态 *
+    ]
+    post: /api/mdm/parking/space/exportDataReport
+
+  # 批量导入停车位信息
+  importParkingSpace:
+    filePath: "${filePath}" # 需要上传文件 文件路径 必传
+    query: [
+        file: "${file}", # 数据文件 *
+        type: "${type}"  # 上传数据类型 *  楼栋:building  房屋:house  车位:parkingspace
+    ]
+    headers:
+      content-type: multipart/form-data
+    post: /api/mdm/parking/space/import
+
+  # 查询车位分页信息列表
+  getSpaceList:
+    query: [
+        current: "${current}",      # 当前页码
+        proCode: "${proCode}",      # 项目编码 *
+        psArea: "${psArea}",        # 车位所属区域 *
+        psName: "${psName}",        # 车位关键字 *
+        size: "${size}",            # 每页显示大小 *
+        status: "${status}"         # 车位状态 *
+    ]
+    get: /api/mdm/parking/space/list
+
+  # 修改车位状态  启用/停用
+  changeSpaceStatus:
+    query: [
+        id: "${id}",        # 车位id *
+        status: "${status}" # 车位状态 *
+    ]
+    post: /api/mdm/parking/space/updateStatus/${id}
+
+

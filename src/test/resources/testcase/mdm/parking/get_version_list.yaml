@@ -1,0 +1,19 @@
+name: getVersionListCase
+description: 获取房产版本列表
+steps:
+  #  获取房产版本列表
+  - api: houseService
+    action: getVersionList
+    actualParameterMap: [
+        houseId: 1397836344574263297 # 房产id
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取房产版本列表基本校验！'
+      - actual: data[0].houseCode
+        matcher: equalTo
+        expect: CAD120210301000004010B1001
+        reason: '获取房产版本列表房产编号校验！'

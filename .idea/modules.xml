@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/contact_test.iml" filepath="$PROJECT_DIR$/contact_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gemdale_api_test.iml" filepath="$PROJECT_DIR$/gemdale_api_test.iml" />
     </modules>
   </component>
 </project>

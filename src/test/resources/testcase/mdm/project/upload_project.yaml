@@ -1,4 +1,4 @@
-name: addProject
+name: uploadProjectCase
 description: 上传项目
 steps:
   #

@@ -1,0 +1,16 @@
+name: getParentOrgCase
+description: 获取上级组织测试用例
+steps:
+  #  获取上级组织
+  - api: organizationService
+    action: getParentOrg
+    actualParameterMap: [
+        orgType: "01",     # 组织机构类型 *
+        tenantId: "1400365942990442498"  # 租户id *
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取组织详情基本检验！'

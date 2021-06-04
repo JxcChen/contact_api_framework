@@ -1,0 +1,15 @@
+name: getVersionListCase
+description: 获取组织机构版本列表信息测试用例
+steps:
+  #  获取组织机构版本列表信息
+  - api: organizationService
+    action: getVersionList
+    actualParameterMap: [
+        orgIds: "1400413455042744321" # 组织id
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取组织机构版本列表信息基本检验！'

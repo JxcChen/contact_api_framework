@@ -1,0 +1,18 @@
+name: getSelectorCase
+description: 获取城市下拉框数据
+steps:
+  #  获取平级省市区下拉框
+  - api: commonService
+    action: getSelector
+    actualParameterMap: [
+      cityId: "1",
+      code: "4403",
+      level: "2",
+      projectCode: "1400367017147502593",
+      projectName: "金地上塘道"
+    ]
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取平级省市区下拉框基本校验！'
