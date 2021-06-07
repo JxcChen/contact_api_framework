@@ -1,9 +1,9 @@
-name: uploadHouseCase
-description: 上传房产
+name: getVersionListCase
+description: 获取版本列表
 steps:
   #
-  - api: houseService
-    action: uploadHouse
+  - api: parkingSpaceService
+    action: getVersionList
     actualParameter: [ "filePath=C:\\Users\\chenjinxuan1\\Desktop\\基础数据平台\\房产导入数据.xlsx","house"]
     id: 0
     asserts:
