@@ -69,7 +69,12 @@ public class TestcaseModel {
                 Arrays.stream(csvFileData).forEach(data -> {
                     for (int i = 0; i < data.length; i++) {
                         // 将数据以 ${csv0} : data 的形式存入
-                        testcaseVariables.put("csv" + i, data[i]);
+                        String value = data[i];
+                        if (value.contains("`")) {
+                            value  = value.replaceAll("`", ",");
+                        }
+                            testcaseVariables.put("csv" + i, value);
+
                     }
                     StepResultModel stepResultModel = step.run(testcaseVariables,queryParamMap);
                     // 3、处理结果变量
