@@ -1,23 +1,27 @@
 name: addOrganizationCase
 description: 添加组织
 steps:
-  #  添加客户服务
+  #  添加集团
   - api: organizationService
     action: addOrganization
     actualParameterMap: [
         address: "威新软件园7栋",   # 详细地址
-        city: "深圳市",         # 所在城市
+        city: "秦皇岛市",
+        cityCodeArr: "null",
         latitude: "116.313", # 纬度
         longitude: "116.313", # 经度
-        orgName: "金地测试服务中心",   # 组织名称
-        orgParentCode: "U000000",  # 上级组织编码
-        orgParentId: "1400365942990442498",   # 上级组织id
-        orgParentName: "金地集团", # 上级组织名称
-        orgShortName: "银地",  # 组织简称
-        orgType: "04",    # 组织类型名称 00集团01下属物业公司02城市公司03片区04服务中心05职能部门
-        phone: "13356464645",  # 电话
-        regionCode: "8089031",   # 所在地区code
-        version: "1"   # 版本号
+        orgName: "金地测试${getTimeStamp}",
+        orgParentCode: "U000026",
+        orgParentId: "1402575101446066177",
+        orgParentName: "金地集团",
+        orgParentType: "00",
+        orgShortName: "3123",
+        orgType: "01",
+        phone: "123123123",
+        province: "河北省",
+        regionCode: "13,1303,130304,130304100",
+        regionName: "海滨镇",
+        regionalismCode: "130304100"
     ]
     id: 0
     asserts:
@@ -25,3 +29,4 @@ steps:
         matcher: equalTo
         expect: 0
         reason: '添加项目校验！'
+

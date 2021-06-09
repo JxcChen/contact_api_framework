@@ -40,19 +40,23 @@ actions:
 #     "regionCode"     所在地区code
 #     "version"        版本号
     body: '{
-       "address": "${address}",
-       "city": "${city}",
-       "latitude": "${latitude}",
-       "longitude": "${longitude}",
-       "orgName": "${orgName}",
-       "orgParentCode": "${orgParentCode}",
-       "orgParentId": "${orgParentId}",
-       "orgParentName": "${orgParentName}",
-       "orgShortName": "${orgShortName}",
-       "orgType": "${orgType}",
-       "phone": "${phone}",
-       "regionCode": "${regionCode}",
-       "version": "${version}"
+        "address": "${address}",
+        "city": "${city}",
+        "cityCodeArr": "${cityCodeArr}",
+        "latitude": "${latitude}",
+        "longitude": "${longitude}",
+        "orgName": "${orgName}",
+        "orgParentCode": "${orgParentCode}",
+        "orgParentId": "${orgParentId}",
+        "orgParentName": "${orgParentName}",
+        "orgParentType": "${orgParentType}",
+        "orgShortName": "${orgShortName}",
+        "orgType": "${orgType}",
+        "phone": "${phone}",
+        "province": "${province}",
+        "regionCode": "${regionCode}",
+        "regionName": "${regionName}",
+        "regionalismCode": "${regionalismCode}"
      }'
     headers:
       content-type: application/json
