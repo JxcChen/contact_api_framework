@@ -5,8 +5,8 @@ steps:
   - api: houseService
     action: changeHouseStatus
     actualParameterMap: [
-        id: "01",        # 房产id *
-        status: "00" # 房产状态 *
+        id: "1402881227098165250",        # 房产id *
+        status: "01" # 房产状态 *
     ]
     id: 0
     asserts:

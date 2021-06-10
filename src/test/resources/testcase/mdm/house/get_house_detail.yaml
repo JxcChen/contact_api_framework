@@ -5,7 +5,7 @@ steps:
   - api: houseService
     action: getHouseDetail
     actualParameterMap: [
-        houseId: 1397836344574263297 # 房产id
+        houseId: 1402848674039468033 # 房产id
     ]
     id: 0
     asserts:
@@ -15,5 +15,5 @@ steps:
         reason: '获取房产详情基本检验！'
       - actual: data.id
         matcher: equalTo
-        expect: 1397836344574263297
+        expect: 1402848674039468033
         reason: '获取房产详情  id校验！'

@@ -5,7 +5,7 @@ steps:
   - api: organizationService
     action: getVersionList
     actualParameterMap: [
-        orgIds: "1400413455042744321" # 组织id
+        orgIds: "1402944558433570818" # 组织id
     ]
     id: 0
     asserts:

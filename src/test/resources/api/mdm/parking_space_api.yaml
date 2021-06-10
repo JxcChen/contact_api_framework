@@ -37,40 +37,35 @@ actions:
   addParkingLot:
     query: [
       takeoverDate: "${takeoverDate}",      # 交付日期
-      plSeqCode : "${plSeqCode }",          # 车场顺序码 *
-      plName : "${plName }",                # 车场名称 *
+      plSeqCode : "${plSeqCode}",           # 车场顺序码 *
+      plName : "${plName}",                 # 车场名称 *
       proCode: "${proCode}"                 # 项目编码 *
     ]
-    get: /api/mdm/parking/lot/save
+    headers:
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+    post: /api/mdm/parking/lot/save
 
   # 编辑车场
   updateParkingLot:
     query: [
-        createBy: "${createBy}",      # 交付日期
-        createDate: "${createDate }",          # 车场顺序码 *
-        id: "${id }",                # 车场名称 *
-        modifyBy: "${modifyBy}",                 # 项目编码 *
-        modifyDate: "${modifyDate}",      # 交付日期
-        orgCode: "${orgCode }",          # 车场顺序码 *
-        plCode: "${plCode }",                # 车场名称 *
-        plName: "${plName}",                 # 项目编码 *
-        plSeqCode: "${plSeqCode}",      # 交付日期
-        proCode: "${proCode }",          # 车场顺序码 *
-        status: "${status }",                # 车场名称 *
-        takeoverDate: "${takeoverDate}",                 # 项目编码 *
-        tenantId: "${tenantId}",          # 车场顺序码 *
-        totalParkings: "${totalParkings}",                # 车场名称 *
-        version: "${version}",                 # 项目编码 *
+        id: "${id}",                     # 车场id *
+        plCode: "${plCode}",             # 车场编码 *
+        plName: "${plName}",             # 车场名
+        plSeqCode: "${plSeqCode}",       # 车场序号
+        proCode: "${proCode}",           # 项目编号 *
+        takeoverDate: "${takeoverDate}"  # 交付日期
     ]
-    get: /api/mdm/parking/lot/update
+    headers:
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+    post: /api/mdm/parking/lot/update
 
   # 修改车场状态  启用/停用
   changeLotStatus:
     query: [
-      id: "${id}",        # 房产id *
-      status: "${status}" # 房产状态 *
+      id: "${id}",        # 车场id *
+      status: "${status}" # 车场状态 *
     ]
-    post: /api/mdm/parking/lot/updateStatus/{id}
+    post: /api/mdm/parking/lot/updateStatus/${id}
 
 
 
@@ -79,7 +74,7 @@ actions:
     query: [
         id: "${id}"        # 车位id *
     ]
-    get: /api/mdm/parking/space/detail/{id}
+    get: /api/mdm/parking/space/detail/${id}
 
   # 车位信息对比
   getSpaceContrast:

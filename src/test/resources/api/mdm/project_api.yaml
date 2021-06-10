@@ -53,6 +53,7 @@ actions:
             "proType": "${proType}",
             "province": "${province}",
             "regionalismCode": "${regionalismCode}",
+            "proStatus": "${proStatus}",
             "version": "${version}",
             "volumetricRate": "${volumetricRate}"}'
     headers:
@@ -62,7 +63,7 @@ actions:
   # 修改项目
   updateProject:
     body: '{
-               "proId":"${proId}",
+               "id":"${proId}",
                "proCode":"${proCode}",
                "buildingArea": "${buildingArea}",
                "chargeArea": "${chargeArea}",
@@ -81,8 +82,9 @@ actions:
                "proType": "${proType}",
                "province": "${province}",
                "regionalismCode": "${regionalismCode}",
-               "version": ${version},
-               "volumetricRate": ${volumetricRate}
+               "proStatus": "${proStatus}",
+               "version": "${version}",
+               "volumetricRate": "${volumetricRate}"
              }'
     headers:
       Content-Type: application/json

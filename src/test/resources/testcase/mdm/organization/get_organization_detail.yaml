@@ -5,7 +5,7 @@ steps:
   - api: organizationService
     action: getDetail
     actualParameterMap: [
-        id: "1400365942990442498" # 组织id
+        id: "1402575101446066177" # 组织id
     ]
     id: 0
     asserts:
@@ -15,5 +15,5 @@ steps:
         reason: '获取组织详情基本检验！'
       - actual: data.id
         matcher: equalTo
-        expect: 1400365942990442498
+        expect: 1402575101450260482
         reason: '获取组织详情  id校验！'

@@ -24,7 +24,8 @@ steps:
         "${csv15}",
         "${csv16}",
         "${csv17}",
-        "${csv18}"
+        "${csv18}",
+        "${csv19}"
     ]
     id: 0
     asserts:

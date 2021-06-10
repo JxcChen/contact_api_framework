@@ -8,7 +8,7 @@ steps:
         bldCode: "null",          # 楼栋编码
         floor: "null",            # 楼层
         houseCode: "null",        # 房屋编码
-        proCode: "PU0000135123000000",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
+        proCode: "PU0000261506240001",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
         type: "building",             # building:楼栋、unit:单元、floor：楼层、house:房屋
         unit: "null"              # 单元
     ]

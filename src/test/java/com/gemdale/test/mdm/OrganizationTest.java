@@ -48,7 +48,7 @@ public class OrganizationTest {
 //
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = Constant.HOUSE_TESTCASE_DIR;
+//        String dirPath = "src/test/resources/testcase/mdm/organization";
 //        Arrays.stream(new File(dirPath).list()).forEach(file ->{
 //            try {
 //                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
@@ -85,18 +85,18 @@ public class OrganizationTest {
 //    return testcaseModels;
 //    }
 
-    /**
-     * 添加组织
-     */
-    public static ArrayList<Arguments> organizationTest() throws Exception {
-        ApiLoader.load(Constant.MDM_API_DIR);
-        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = "src/test/resources/testcase/mdm/organization/add_organization.yaml";
-        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-        return testcaseModels;
-    }
+//    /**
+//     * 添加组织
+//     */
+//    public static ArrayList<Arguments> organizationTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/organization/add_organization.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
 
     /**
      * 编辑组织
@@ -140,6 +140,20 @@ public class OrganizationTest {
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
 //    }
+
+
+    /**
+     * 获取版本列表
+     */
+    public static ArrayList<Arguments> organizationTest() throws Exception {
+        ApiLoader.load(Constant.MDM_API_DIR);
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+        String dirPath = "src/test/resources/testcase/mdm/organization/get_version_listl.yaml";
+        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+        return testcaseModels;
+    }
 
 
 }

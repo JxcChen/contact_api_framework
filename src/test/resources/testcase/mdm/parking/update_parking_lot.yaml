@@ -1,0 +1,20 @@
+name: updateParkingLotCase
+description: 编辑车场测试用例
+steps:
+  #  添加车场
+  - api: parkingSpaceService
+    action: updateParkingLot
+    actualParameterMap: [
+        id: "1402963651366752258",
+        plCode: "LPU00002651041100010002",
+        plName: "自动化用的${getTimeStamp}",
+        plSeqCode: "${random5}",
+        proCode: "PU0000265104110001",
+        takeoverDate: "2021/08/10"
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '添加车场基本检验！'

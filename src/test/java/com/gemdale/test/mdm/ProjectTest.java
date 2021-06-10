@@ -43,22 +43,22 @@ public class ProjectTest {
     }
 
 
-//    public static ArrayList<Arguments> projectTest(){
-//        ApiLoader.load(Constant.MDM_API_DIR);
-//
-//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = Constant.PROJECT_TESTCASE_DIR;
-//        Arrays.stream(new File(dirPath).list()).forEach(file ->{
-//            try {
-//                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
-//                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        });
-//        return testcaseModels;
-//    }
+    public static ArrayList<Arguments> projectTest(){
+        ApiLoader.load(Constant.MDM_API_DIR);
+
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+        String dirPath = Constant.PROJECT_TESTCASE_DIR;
+        Arrays.stream(new File(dirPath).list()).forEach(file ->{
+            try {
+                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
+                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        return testcaseModels;
+    }
     /**
      * 获取分页数据
      */
@@ -166,14 +166,14 @@ public class ProjectTest {
     /**
      * 添加项目 csv
      */
-    public static ArrayList<Arguments> projectTest() throws Exception {
-        ApiLoader.load(Constant.MDM_API_DIR);
-        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = "src/test/resources/testcase/mdm/project/add_project_csv.yaml";
-        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-        return testcaseModels;
-    }
+//    public static ArrayList<Arguments> projectTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/project/add_project_csv.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
 
 }

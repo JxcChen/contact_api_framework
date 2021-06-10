@@ -66,7 +66,7 @@ public class HouseTest {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/house/get_house_detail.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/house/get_space_detail.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
@@ -118,7 +118,7 @@ public class HouseTest {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/house/get_house_list.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/house/get_parking_lot_list.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
@@ -131,7 +131,7 @@ public class HouseTest {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/house/change_house_status.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/house/change_lot_status.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;

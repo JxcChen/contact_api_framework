@@ -5,23 +5,24 @@ steps:
   - api: projectService
     action: addProject
     actualParameterMap: [
-        buildingArea: "10000000000",
+        buildingArea: "1000000",
         chargeArea: "999999999.99",
         city: "深圳市",
-        contractType: "03",
+        contractType: "02",
         coveredArea: "999999999.99",
         district: "南山",
         latitude: "116.313",
         longitude: "116.313",
-        orgCode: "U0000000003",
+        orgCode: "U0000260080000000001",
         phone: "0755-1234567",
         proAddress: "南山科技园",
-        proName: "深圳湾金地分湾",
+        proName: "深圳湾金地分湾${random5}",
         proShortname: "金地湾",
         proSource: "05",
         proType: "08",
         province: "广东",
-        regionalismCode: "444403",
+        regionalismCode: "15,1506,150626,150626104",
+        proStatus: "02",
         version: "0",
         volumetricRate: "1.55"
     ]

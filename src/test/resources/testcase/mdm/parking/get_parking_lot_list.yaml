@@ -1,0 +1,15 @@
+name: getParkingLotlistCase
+description: 获取车场信息列表测试用例
+steps:
+  #  获取车场信息列表
+  - api: parkingSpaceService
+    action: getParkingLotlist
+    actualParameterMap: [
+        proCode: "PU0000135123000000",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取车场信息列表！'

@@ -14,7 +14,10 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -45,7 +48,7 @@ public class ParkingTest {
 //
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = Constant.HOUSE_TESTCASE_DIR;
+//        String dirPath = "src/test/resources/testcase/mdm/parking";
 //        Arrays.stream(new File(dirPath).list()).forEach(file ->{
 //            try {
 //                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
@@ -57,56 +60,56 @@ public class ParkingTest {
 //        return testcaseModels;
 //    }
     /**
-     * 获取组织详情
+     * 添加车场
      */
-    public static ArrayList<Arguments> parkingTest() throws Exception {
-        ApiLoader.load(Constant.MDM_API_DIR);
-        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = "src/test/resources/testcase/mdm/parking/get_cust_list.yaml";
-        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-        return testcaseModels;
-    }
+//    public static ArrayList<Arguments> parkingTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/parking/add_parking_lot.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
 
     /**
-     * 获取上级组织
+     * 编辑车场
      */
 //    public static ArrayList<Arguments> parkingTest() throws Exception {
 //    ApiLoader.load(Constant.MDM_API_DIR);
 //    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //    ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//    String dirPath = "src/test/resources/testcase/mdm/organization/get_parent_org.yaml";
+//    String dirPath = "src/test/resources/testcase/mdm/parking/update_parking_lot.yaml";
 //    TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //    testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //    return testcaseModels;
 //    }
 
     /**
-     * 添加组织
+     * 修改车场状态
      */
 //    public static ArrayList<Arguments> parkingTest() throws Exception {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/add_organization.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/parking/change_lot_status.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
 //    }
 
     /**
-     * 编辑组织
+     * 获取车位详情
      */
-//    public static ArrayList<Arguments> parkingTest() throws Exception {
-//        ApiLoader.load(Constant.MDM_API_DIR);
-//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/update_organization.yaml";
-//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-//        return testcaseModels;
-//    }
+    public static ArrayList<Arguments> parkingTest() throws Exception {
+        ApiLoader.load(Constant.MDM_API_DIR);
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+        String dirPath = "src/test/resources/testcase/mdm/parking/get_space_detail.yaml";
+        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+        return testcaseModels;
+    }
 
 
 

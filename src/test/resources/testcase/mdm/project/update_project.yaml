@@ -1,7 +1,7 @@
 name: updateProject
 description: 修改项目
 steps:
-  #  添加客户服务
+  #  修改项目服务
   - api: projectService
     action: updateProject
 #       "proId" 必填,"proCode" 必填, "buildingArea","chargeArea","city",
@@ -16,27 +16,28 @@ steps:
 #                       "深圳大学+-)asdASD${random10}","05","08",
 #                       "广东","512300",0,1.55 ]
     actualParameterMap: [
-     proId: "1399672538086248450",
-     proCode: "string",
-     buildingArea: "${random10}",
-     chargeArea: "${random11}",
-     city: "深圳市",
-     contractType: "03",
-     coveredArea: "${random9}",
-     district: "南山",
-     latitude: "116.313",
-     longitude: "116.313",
-     orgCode: "00222",
-     phone: "0755-1234567",
-     proAddress: "南山科技园",
-     proName: "深圳大学+-)asdASD${random10}",
-     proShortname: "深圳大学+-)asdASD${random10}",
-     proSource: "05",
-     proType: "08",
-     province: "广东",
-     regionalismCode: "512300",
-     version: "5",
-     volumetricRate: "1.55",
+      id: "1402935146310537217",
+      proCode: "PU0000265104110001",
+      buildingArea: "1000000",
+      chargeArea: "999999999.99",
+      city: "深圳市",
+      contractType: "02",
+      coveredArea: "999999999.99",
+      district: "南山",
+      latitude: "116.31",
+      longitude: "116.31",
+      orgCode: "U0000260020000000001",
+      phone: "0755-1234567",
+      proAddress: "南山科技园",
+      proName: "自动化用的${getTimeStamp}",
+      proShortname: "自动化用的$",
+      proSource: "03",
+      proType: "08",
+      province: "广东",
+      regionalismCode: "15,1506,150626,150626104",
+      proStatus: "02",
+      version: "3",
+      volumetricRate: "1.55"
     ]
     id: 0
     asserts:

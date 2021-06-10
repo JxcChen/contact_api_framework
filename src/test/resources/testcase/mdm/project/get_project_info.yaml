@@ -4,7 +4,7 @@ steps:
   #  添加客户服务
   - api: projectService
     action: getProjectDetail
-    actualParameter: [ 1400367017147502593 ]
+    actualParameter: [ 1402820260356165633 ]
     id: 0
     asserts:
       - actual: code
@@ -13,5 +13,5 @@ steps:
         reason: '获取项目详情校验！'
       - actual: data.proName
         matcher: equalTo
-        expect: '金地上塘道'
+        expect: '深圳金地上塘道'
         reason: '获取项目详情 项目名称校验'

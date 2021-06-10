@@ -8,7 +8,7 @@ steps:
         bldCode: "null",          # 楼栋编码
         floor: "null",            # 楼层
         houseCode: "null",        # 房屋编码
-        proCode: "PU0000000005123000000",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
+        proCode: "PU0000265104110001",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
         type: "null",             # building:楼栋、unit:单元、floor：楼层、house:房屋
         unit: "null"              # 单元
     ]
@@ -20,5 +20,5 @@ steps:
         reason: '导出房产数据基本检验！'
       - actual: data
         matcher: containsString
-        expect: 金地上塘
+        expect: 自动化用的
         reason: '导出房产数据 url校验！'
