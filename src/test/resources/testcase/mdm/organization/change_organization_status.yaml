@@ -5,8 +5,8 @@ steps:
   - api: organizationService
     action: updateStatus
     actualParameterMap: [
-        id: "1400657314280640514",        # 房产id *
-        status: "01"   # 组织状态 *
+        id: "1400657314280640514",        # 组织id *
+        status: "00"   # 组织状态 *
     ]
     id: 0
     asserts:

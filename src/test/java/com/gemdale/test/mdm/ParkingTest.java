@@ -43,22 +43,22 @@ public class ParkingTest {
     }
 
 
-//    public static ArrayList<Arguments> parkingTest(){
-//        ApiLoader.load(Constant.MDM_API_DIR);
-//
-//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/parking";
-//        Arrays.stream(new File(dirPath).list()).forEach(file ->{
-//            try {
-//                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
-//                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        });
-//        return testcaseModels;
-//    }
+    public static ArrayList<Arguments> parkingTest(){
+        ApiLoader.load(Constant.MDM_API_DIR);
+
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+        String dirPath = Constant.PARKING_TESTCASE_DIR;
+        Arrays.stream(new File(dirPath).list()).forEach(file ->{
+            try {
+                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
+                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        return testcaseModels;
+    }
     /**
      * 添加车场
      */
@@ -101,26 +101,26 @@ public class ParkingTest {
     /**
      * 获取车位详情
      */
-    public static ArrayList<Arguments> parkingTest() throws Exception {
-        ApiLoader.load(Constant.MDM_API_DIR);
-        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = "src/test/resources/testcase/mdm/parking/get_space_detail.yaml";
-        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-        return testcaseModels;
-    }
+//    public static ArrayList<Arguments> parkingTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/parking/get_space_detail.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
 
 
 
 //    /**
-//     * 修改组织状态
+//     * 获取车位对比信息
 //     */
 //    public static ArrayList<Arguments> parkingTest() throws Exception {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/change_organization_status.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/parking/get_space_contract.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
@@ -129,17 +129,68 @@ public class ParkingTest {
 
 
     /**
-     * 导入房产数据
+     * 导出房产数据
      */
 //    public static ArrayList<Arguments> parkingTest() throws Exception {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/house/upload_house.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/parking/export_space_data.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
+
+    /**
+     * 上传车位excel数据
+     */
+//    public static ArrayList<Arguments> parkingTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/parking/upload_space.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
+
+    /**
+     *  获取车位分页数据
+     */
+//    public static ArrayList<Arguments> parkingTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/parking/get_parking_space_list.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
 //    }
 
 
+    /**
+     *  修改车位状态
+     */
+//    public static ArrayList<Arguments> parkingTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/parking/change_space_status.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
+
+    /**
+     *  获取车场版本列表
+     */
+//    public static ArrayList<Arguments> parkingTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/parking/get_version_list.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
 }

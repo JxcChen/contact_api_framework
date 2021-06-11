@@ -1,0 +1,62 @@
+name: buildingService   # 楼栋相关接口 /api/mdm/building/getVersionList
+baseUrl: http://portal-st.ienjoys.com:80
+actions:
+  # 获取楼栋版本信息
+  getVersionList:
+    query: [
+        buildIds : "${buildIds}" # 楼栋id *  可填写多个
+    ]
+    get: /api/mdm/building/getVersionList
+
+  # 获取楼栋详情
+  getBuildingList:
+    query: [
+        proCode : "${proCode}"
+    ]
+    get: /api/mdm/building/list
+
+  # 添加楼栋
+  addBuilding:
+    query: [
+              bldForm: "${bldForm}",            # 楼体建筑形式 *
+              bldName: "${bldName}",            # 楼栋名称 *
+              bldSeqCode: "${bldSeqCode}",      # 楼栋排序 *
+              bldUses: "${bldUses}",            # 楼栋用途 *
+              proCode: "${proCode}",            # 项目编码 *
+              takeoverTime: "${takeoverTime}",  # 交付时间 *
+              topFloor: "${topFloor}",          # 最高层数 *
+              topHouse: "${topHouse}",          # 单层最大户数 *
+              units: "${units}"                 # 单元数 *
+           ]
+    headers:
+      content-type: application/x-www-form-urlencoded; charset=UTF-8
+    post: /api/mdm/building/save
+
+  # 编辑楼栋信息
+  updateBuilding:
+    query: [
+        id: "${id}",                      # 楼栋id
+        bldCode: "${bldCode}",            # 楼栋编码
+        bldForm: "${bldForm}",            # 楼体建筑形式 *
+        bldName: "${bldName}",            # 楼栋名称 *
+        bldSeqCode: "${bldSeqCode}",      # 楼栋排序 *
+        bldUses: "${bldUses}",            # 楼栋用途 *
+        proCode: "${proCode}",            # 项目编码 *
+        takeoverTime: "${takeoverTime}",  # 交付时间 *
+        topFloor: "${topFloor}",          # 最高层数 *
+        topHouse: "${topHouse}",          # 单层最大户数 *
+        units: "${units}"                 # 单元数 *
+    ]
+    headers:
+      content-type: application/x-www-form-urlencoded; charset=UTF-8
+    post: /api/mdm/building/update
+
+  # 修改楼栋状态  启用/停用
+  changeHouseStatus:
+    query: [
+      id: "${id}",        # 楼栋id *
+      status: "${status}" # 楼栋状态 *
+    ]
+    post: /api/mdm/building/updateStatus/${id}
+
+

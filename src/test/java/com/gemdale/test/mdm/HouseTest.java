@@ -92,7 +92,7 @@ public class HouseTest {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/house/export_house_data.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/house/export_space_data.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
@@ -146,7 +146,7 @@ public class HouseTest {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/house/upload_house.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/house/upload_space.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;

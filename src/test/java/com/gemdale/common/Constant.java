@@ -28,6 +28,9 @@ public class Constant {
     public static final String CUSTOMER_SERVICE_TESTCASE_DIR = "src/test/resources/testcase/cms/customer_service";
 
 
+
+
+
     // 基础数据平台
     /**
      * 客户相关接口测试用例
@@ -40,7 +43,27 @@ public class Constant {
     public static final String PROJECT_TESTCASE_DIR = "src/test/resources/testcase/mdm/project";
 
     /**
-     * 项目相关接口测试用例
+     * 房产相关接口测试用例
      */
     public static final String HOUSE_TESTCASE_DIR = "src/test/resources/testcase/mdm/house";
+
+    /**
+     * 楼栋相关接口测试用例
+     */
+    public static final String BUILDING_TESTCASE_DIR = "src/test/resources/testcase/mdm/building";
+
+    /**
+     * 组织相关接口测试用例
+     */
+    public static final String ORGANIZATION_TESTCASE_DIR = "src/test/resources/testcase/mdm/organization";
+
+    /**
+     * 车位车场相关接口测试用例
+     */
+    public static final String PARKING_TESTCASE_DIR = "src/test/resources/testcase/mdm/parking";
+
+    /**
+     * 公共相关接口测试用例
+     */
+    public static final String COMMON_TESTCASE_DIR = "src/test/resources/testcase/mdm/parking";
 }

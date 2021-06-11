@@ -11,7 +11,7 @@ actions:
   # 停车场信息版本对比
   getVersionList:
     query: [
-        lotIds : "${lotIds }"  # 车场编号 * 可以多个 用,隔开
+        lotIds : "${lotIds}"  # 车场编号 * 可以多个 用,隔开
     ]
     get: /api/mdm/parking/lot/getVersionList
 
@@ -79,7 +79,7 @@ actions:
   # 车位信息对比
   getSpaceContrast:
     query: [
-        spaceIds: "${spaceIds }"  # 车位id *  可以传多个
+        spaceIds: "${spaceIds}"  # 车位id *  可以传多个
     ]
     get: /api/mdm/parking/space/contrast
 
@@ -91,6 +91,8 @@ actions:
         psName: "${psName}",        # 车位名称关键字 *
         status: "${status}"         # 车位状态 *
     ]
+    headers:
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
     post: /api/mdm/parking/space/exportDataReport
 
   # 批量导入停车位信息
@@ -101,7 +103,7 @@ actions:
         type: "${type}"  # 上传数据类型 *  楼栋:building  房屋:house  车位:parkingspace
     ]
     headers:
-      content-type: multipart/form-data
+      content-type: multipart/form-data; charset=UTF-8
     post: /api/mdm/parking/space/import
 
   # 查询车位分页信息列表

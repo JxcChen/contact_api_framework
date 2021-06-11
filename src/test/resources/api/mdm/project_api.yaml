@@ -24,13 +24,13 @@ actions:
   # 获取项目分页
   getProjectPageList:
     query: [
-      contractType: "${contractType}",
-      current: "${current}",
-      orgCode: "${orgCode}",
-      proName: "${proName}",
-      proType: "${proType}",
-      status: "${status}",
-      size: "${size}",
+      contractType: "${contractType}",    # 项目类型
+      current: "${current}",              # 当前页码
+      orgCode: "${orgCode}",              # 所属组织编码
+      proName: "${proName}",              # 项目名称
+      proType: "${proType}",              # 项目类型
+      status: "${status}",                # 项目状态
+      size: "${size}",                    # 单页显示数据数
     ]
     get: /mdm/project/page
 

@@ -1,0 +1,19 @@
+name: getBuildingListCase
+description: 获取楼栋列表测试用例
+steps:
+  #  获取项目楼栋信息
+  - api: buildingService
+    action: getBuildingList
+    actualParameterMap: [
+        proCode: "PU0000265104110001"          # 项目编号
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取项目楼栋信息校验！'
+      - actual: data.records[0].bldName
+        matcher: equalTo
+        expect: 测试楼栋001
+        reason: '获取项目楼栋 名称校验!'

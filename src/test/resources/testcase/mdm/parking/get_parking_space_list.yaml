@@ -1,0 +1,28 @@
+name: getSpaceListCase
+description: 获取车位分页信息列表测试用例
+steps:
+  #  获取车位分页信息
+  - api: parkingSpaceService
+    action: getSpaceList
+    actualParameterMap: [
+        current: "1",      # 当前页码
+        proCode: "PU0000265104110001",      # 项目编码 *
+        psArea: "null",        # 车位所属区域 *
+        psName: "null",        # 车位关键字 *
+        size: "10",            # 每页显示大小 *
+        status: "null"         # 车位状态 *
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取车位分页信息基础校验！'
+      - actual: data.size
+        matcher: equalTo
+        expect: 10
+        reason: '获取车位分页信息 单页展示数量校验！'
+      - actual: data.current
+        matcher: equalTo
+        expect: 1
+        reason: '获取车位分页信息 当前页码校验！'

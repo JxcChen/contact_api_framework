@@ -5,7 +5,7 @@ steps:
   - api: parkingSpaceService
     action: getSpaceDetail
     actualParameterMap: [
-        id: 1402963651366752258 # 房产id
+        id: 1403166045027438593 # id
     ]
     id: 0
     asserts:
@@ -13,7 +13,7 @@ steps:
         matcher: equalTo
         expect: 0
         reason: '获取车位详情基本检验！'
-      - actual: data.id
+      - actual: data.psId
         matcher: equalTo
-        expect: 1402963651366752258
+        expect: 1403166045027438593
         reason: '获取车位详情  id校验！'

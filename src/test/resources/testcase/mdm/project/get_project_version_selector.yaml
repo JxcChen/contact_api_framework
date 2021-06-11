@@ -1,10 +1,13 @@
-name: getVersionSelector
-description: 项目信息版本对比
+name: getVersionSelectorCase
+description: 获取项目版本对比信息测试用例
 steps:
-  #  添加客户服务
+  #  获取项目版本对比信息
   - api: projectService
     action: getVersionSelector
-    actualParameter: [ "project","CAD1" ]
+    actualParameterMap: [
+        type: "project",              # type 类型 (project:项目,building:楼栋,house:房产,parkinglot:车场,parkingspace:车位)
+        code: "PU0000265104110001"    # 项目编码
+    ]
     id: 0
     asserts:
       - actual: code

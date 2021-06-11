@@ -1,0 +1,15 @@
+name: getParkingLotlistCase
+description: 获取车位对比信息测试用例
+steps:
+  #  获取车位对比信息
+  - api: parkingSpaceService
+    action: getSpaceContrast
+    actualParameterMap: [
+        spaceIds: "1403166045027438593",          # 车位id
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '获取车位对比信息基础校验！'

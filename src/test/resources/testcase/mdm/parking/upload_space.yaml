@@ -1,0 +1,13 @@
+name: importParkingSpace
+description: 导入车位数据测试用例
+steps:
+  #
+  - api: parkingSpaceService
+    action: importParkingSpace
+    actualParameter: [ "filePath=C:\\Users\\chenjinxuan1\\Desktop\\基础数据平台\\车位上传数据.xlsx","house"]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '上传车位基础校验！'

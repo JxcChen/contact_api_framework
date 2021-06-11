@@ -5,11 +5,11 @@ steps:
   - api: parkingSpaceService
     action: getCustList
     actualParameterMap: [
-        psCode: SPU00000000051230000000044 # 车位编号
+        psCode: SPU00002651041100010036 # 车位编号
     ]
     id: 0
     asserts:
       - actual: code
         matcher: equalTo
         expect: 0
-        reason: '获取房产详情基本检验！'
+        reason: '获取车位下所有客户列表基本检验！'

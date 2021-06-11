@@ -1,0 +1,22 @@
+name: exportDataReportCase
+description: 导出车位数据测试用例
+steps:
+  #  导出车位数据
+  - api: parkingSpaceService
+    action: exportDataReport
+    actualParameterMap: [
+        proCode: "PU0000265104110001",      # 项目code
+        psArea: "null",        # 车位所属区域 *
+        psName: "null",        # 车位名称关键字 *
+        status: "null"         # 车位状态 *
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '导出车位数据基本检验！'
+      - actual: data
+        matcher: containsString
+        expect: 自动化用的客户车位报表
+        reason: '导出车位数据 url校验！'

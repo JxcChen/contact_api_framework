@@ -1,0 +1,25 @@
+name: updateBuilding
+description: 编辑楼栋测试用例
+steps:
+  #  编辑楼栋
+  - api: buildingService
+    action: updateBuilding
+    actualParameterMap: [
+        id: "1403250678012317697",          # 楼栋id
+        bldCode: "BPU00002651041100010004", # 楼栋编码
+        bldForm: "04",                      # 楼体建筑形式 *
+        bldName: "自动化编辑${getTimeStamp}",    # 楼栋名称 *
+        bldSeqCode: "${random4}",           # 楼栋排序 *
+        bldUses: "04",                      # 楼栋用途 *
+        proCode: "PU0000265104110001",      # 项目编码 *
+        takeoverTime: "2021/06/23",         # 交付时间 *
+        topFloor: "${random3}",                      # 最高层数 *
+        topHouse: "${random2}",                     # 单层最大户数 *
+        units: "${random1}"                          # 单元数 *
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '编辑楼栋 基础校验！'

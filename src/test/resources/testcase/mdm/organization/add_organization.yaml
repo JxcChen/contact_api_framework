@@ -10,7 +10,7 @@ steps:
         cityCodeArr: "null",
         latitude: "116.313", # 纬度
         longitude: "116.313", # 经度
-        orgName: "金地测试${getTimeStamp}",
+        orgName: "自动化新增${getTimeStamp}",
         orgParentCode: "U000026",
         orgParentId: "1402575101446066177",
         orgParentName: "金地集团",

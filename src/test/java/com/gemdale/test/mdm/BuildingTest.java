@@ -8,6 +8,7 @@ import com.gemdale.testcase.TestcaseModel;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
+import io.restassured.http.ContentType;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -28,13 +29,13 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
  */
 @Epic("基础数据平台")
 @Feature("房产相关用例")
-public class OrganizationTest {
-    Logger logger = LoggerFactory.getLogger(OrganizationTest.class);
+public class BuildingTest {
+    Logger logger = LoggerFactory.getLogger(BuildingTest.class);
 
     @Description("房产相关测试用例")
     @ParameterizedTest
     @MethodSource
-    void organizationTest(TestcaseModel testcaseModel, String name, String description) throws Exception {
+    void buildingTest(TestcaseModel testcaseModel, String name, String description) throws Exception {
         logger.info("【用例开始执行】");
         logger.info("用例名称： " + name);
         logger.info("用例描述： " + description);
@@ -43,12 +44,12 @@ public class OrganizationTest {
     }
 
 
-    public static ArrayList<Arguments> organizationTest(){
+    public static ArrayList<Arguments> buildingTest(){
         ApiLoader.load(Constant.MDM_API_DIR);
 
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = Constant.ORGANIZATION_TESTCASE_DIR;
+        String dirPath = Constant.BUILDING_TESTCASE_DIR;
         Arrays.stream(new File(dirPath).list()).forEach(file ->{
             try {
                 TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
@@ -60,100 +61,70 @@ public class OrganizationTest {
         return testcaseModels;
     }
     /**
-     * 获取组织详情
+     * 获取楼栋详情
      */
-//    public static ArrayList<Arguments> organizationTest() throws Exception {
+//    public static ArrayList<Arguments> buildingTest() throws Exception {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/get_organization_detail.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/building/get_version_list.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
 //    }
 
     /**
-     * 获取上级组织
+     * 获取楼栋信息
      */
-//    public static ArrayList<Arguments> organizationTest() throws Exception {
+//    public static ArrayList<Arguments> buildingTest() throws Exception {
 //    ApiLoader.load(Constant.MDM_API_DIR);
 //    ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //    ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//    String dirPath = "src/test/resources/testcase/mdm/organization/get_parent_org.yaml";
+//    String dirPath = "src/test/resources/testcase/mdm/building/get_building_list.yaml";
 //    TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //    testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //    return testcaseModels;
 //    }
 
-//    /**
-//     * 添加组织
-//     */
-//    public static ArrayList<Arguments> organizationTest() throws Exception {
+    /**
+     * 新建楼栋
+     */
+//    public static ArrayList<Arguments> buildingTest() throws Exception {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/add_organization.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/building/add_building.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
 //    }
 
     /**
-     * 编辑组织
+     * 编辑楼栋
      */
-//    public static ArrayList<Arguments> organizationTest() throws Exception {
+//    public static ArrayList<Arguments> buildingTest() throws Exception {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/update_organization.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/building/update_building.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
 //    }
-
-
 
     /**
-     * 修改组织状态
+     * 修改房产状态
      */
-//    public static ArrayList<Arguments> organizationTest() throws Exception {
+//    public static ArrayList<Arguments> buildingTest() throws Exception {
 //        ApiLoader.load(Constant.MDM_API_DIR);
 //        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 //        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/change_organization_status.yaml";
+//        String dirPath = "src/test/resources/testcase/mdm/building/change_building_status.yaml";
 //        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
 //        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
 //        return testcaseModels;
 //    }
 
-
-
-    /**
-     * 导入房产数据
-     */
-//    public static ArrayList<Arguments> organizationTest() throws Exception {
-//        ApiLoader.load(Constant.MDM_API_DIR);
-//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/house/upload_space.yaml";
-//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-//        return testcaseModels;
-//    }
-
-
-    /**
-     * 获取版本列表
-     */
-//    public static ArrayList<Arguments> organizationTest() throws Exception {
-//        ApiLoader.load(Constant.MDM_API_DIR);
-//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/get_version_listl.yaml";
-//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-//        return testcaseModels;
-//    }
 
 
 }

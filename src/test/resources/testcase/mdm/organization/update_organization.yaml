@@ -11,15 +11,15 @@ steps:
         city: "深圳市",         # 所在城市
         latitude: "116.313", # 纬度
         longitude: "116.313", # 经度
-        orgName: "银地组织${getTimeStamp}",   # 组织名称
+        orgName: "自动化编辑${getTimeStamp}",   # 组织名称
         orgParentCode: "U000026",  # 上级组织编码
-        orgParentId: "1402582991254851586",   # 上级组织id
+        orgParentId: "1402575101446066177",   # 上级组织id
         orgParentName: "金地集团", # 上级组织名称
         orgShortName: "银地",  # 组织简称
-        orgType: "00",    # 组织类型名称 00集团01下属物业公司02城市公司03片区04服务中心05职能部门
+        orgType: "01",    # 组织类型名称 00集团01区域公司02城市公司03片区04服务中心05职能部门
         phone: "13356464645",  # 电话
         regionCode: "8089031",   # 所在地区code
-        version: "3"   # 版本号
+        version: "null"   # 版本号
     ]
     id: 0
     asserts:

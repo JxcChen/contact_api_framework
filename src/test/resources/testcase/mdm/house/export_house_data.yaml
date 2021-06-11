@@ -1,5 +1,5 @@
 name: exportHouseDataCase
-description: 导出房产数据
+description: 导出房产数据测试用例
 steps:
   #  导出房产数据
   - api: houseService
@@ -17,7 +17,7 @@ steps:
       - actual: code
         matcher: equalTo
         expect: 0
-        reason: '导出房产数据基本检验！'
+        reason: '导出房产数据 基础检验！'
       - actual: data
         matcher: containsString
         expect: 自动化用的

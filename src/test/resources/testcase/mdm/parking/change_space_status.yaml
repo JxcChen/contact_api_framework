@@ -1,0 +1,16 @@
+name: changeSpaceStatusCase
+description: 修改车位状态用例
+steps:
+  #  修改车位状态
+  - api: parkingSpaceService
+    action: changeSpaceStatus
+    actualParameterMap: [
+        id: "1403166045014855682",        # 车位 *
+        status: "01"     # 车位状态 *
+    ]
+    id: 0
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '修改车位状态基本检验！'
