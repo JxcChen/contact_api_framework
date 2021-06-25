@@ -27,11 +27,11 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
  * @Description: TODO
  */
 @Epic("基础数据平台")
-@Feature("房产相关用例")
+@Feature("组织相关用例")
 public class OrganizationTest {
     Logger logger = LoggerFactory.getLogger(OrganizationTest.class);
 
-    @Description("房产相关测试用例")
+    @Description("组织相关测试用例")
     @ParameterizedTest
     @MethodSource
     void organizationTest(TestcaseModel testcaseModel, String name, String description) throws Exception {
@@ -43,22 +43,22 @@ public class OrganizationTest {
     }
 
 
-    public static ArrayList<Arguments> organizationTest(){
-        ApiLoader.load(Constant.MDM_API_DIR);
-
-        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = Constant.ORGANIZATION_TESTCASE_DIR;
-        Arrays.stream(new File(dirPath).list()).forEach(file ->{
-            try {
-                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
-                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-        return testcaseModels;
-    }
+//    public static ArrayList<Arguments> organizationTest(){
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = Constant.ORGANIZATION_TESTCASE_DIR;
+//        Arrays.stream(new File(dirPath).list()).forEach(file ->{
+//            try {
+//                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
+//                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        });
+//        return testcaseModels;
+//    }
     /**
      * 获取组织详情
      */
@@ -116,15 +116,15 @@ public class OrganizationTest {
     /**
      * 修改组织状态
      */
-//    public static ArrayList<Arguments> organizationTest() throws Exception {
-//        ApiLoader.load(Constant.MDM_API_DIR);
-//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/organization/change_organization_status.yaml";
-//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-//        return testcaseModels;
-//    }
+    public static ArrayList<Arguments> organizationTest() throws Exception {
+        ApiLoader.load(Constant.MDM_API_DIR);
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+        String dirPath = "src/test/resources/testcase/mdm/organization/change_organization_status.yaml";
+        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+        return testcaseModels;
+    }
 
 
 

@@ -19,10 +19,10 @@ steps:
       id: "1402952120189063170",
       proCode: "PU0000265104110001",
       buildingArea: "${random4}",
-      chargeArea: "${random5}.99",
+      chargeArea: "${random5}",
       city: "深圳市",
       contractType: "02",
-      coveredArea: "${random6}.99",
+      coveredArea: "${random6}",
       district: "南山",
       latitude: "116.31",
       longitude: "116.31",
@@ -36,7 +36,7 @@ steps:
       province: "广东",
       regionalismCode: "15,1506,150626,150626104",
       proStatus: "02",
-      version: "null",
+      version: "3",
       volumetricRate: "1.55"
     ]
     id: 0

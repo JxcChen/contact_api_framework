@@ -43,34 +43,34 @@ public class HouseTest {
     }
 
 
-    public static ArrayList<Arguments> houseTest(){
-        ApiLoader.load(Constant.MDM_API_DIR);
-
-        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-        String dirPath = Constant.HOUSE_TESTCASE_DIR;
-        Arrays.stream(new File(dirPath).list()).forEach(file ->{
-            try {
-                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
-                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-        return testcaseModels;
-    }
+//    public static ArrayList<Arguments> houseTest(){
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = Constant.HOUSE_TESTCASE_DIR;
+//        Arrays.stream(new File(dirPath).list()).forEach(file ->{
+//            try {
+//                TestcaseModel testcaseModel = TestcaseModel.load(dirPath+"/"+file);
+//                testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        });
+//        return testcaseModels;
+//    }
     /**
      * 获取房产详情
      */
-//    public static ArrayList<Arguments> houseTest() throws Exception {
-//        ApiLoader.load(Constant.MDM_API_DIR);
-//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
-//        String dirPath = "src/test/resources/testcase/mdm/house/get_space_detail.yaml";
-//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
-//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
-//        return testcaseModels;
-//    }
+    public static ArrayList<Arguments> houseTest() throws Exception {
+        ApiLoader.load(Constant.MDM_API_DIR);
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+        String dirPath = "src/test/resources/testcase/mdm/house/get_house_detail.yaml";
+        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+        return testcaseModels;
+    }
 
     /**
      * 获取房屋下所有客户信息
@@ -152,5 +152,15 @@ public class HouseTest {
 //        return testcaseModels;
 //    }
 
+
+//        public static ArrayList<Arguments> houseTest() throws Exception {
+//        ApiLoader.load(Constant.MDM_API_DIR);
+//        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+//        ArrayList<Arguments> testcaseModels = new ArrayList<>();
+//        String dirPath = "src/test/resources/testcase/mdm/house/get_house_list.yaml";
+//        TestcaseModel testcaseModel = TestcaseModel.load(dirPath);
+//        testcaseModels.add(arguments(testcaseModel,testcaseModel.getName(),testcaseModel.getDescription()));
+//        return testcaseModels;
+//    }
 
 }

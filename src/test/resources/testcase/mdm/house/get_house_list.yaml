@@ -8,7 +8,7 @@ steps:
         bldCode: "null",          # 楼栋编码
         floor: "null",            # 楼层
         houseCode: "null",        # 房屋编码
-        proCode: "PU0000261506240001",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
+        proCode: "PU0000265104110001",          # 项目编号   根据项目查 其余条件无用 查询项目下可用的房产
         type: "building",             # building:楼栋、unit:单元、floor：楼层、house:房屋
         unit: "null"              # 单元
     ]
@@ -20,6 +20,10 @@ steps:
         matcher: equalTo
         expect: 0
         reason: '获取项目楼栋信息校验！'
+      - actual: data[0].bldCode
+        matcher: notNull
+        expect: 0
+        reason: '获取项目楼栋信息楼栋编码 非空校验！'
   # 获取楼栋单元信息
   - api: houseService
     action: getHouseList

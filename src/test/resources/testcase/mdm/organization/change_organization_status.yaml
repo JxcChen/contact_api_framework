@@ -1,16 +1,65 @@
 name: changeStatusCase
 description: 修改组织状态
 steps:
-  #  获取房产详情
+  #  先获取到组织最新id
+  - api: organizationService
+    action: getDetail
+    actualParameterMap: [
+        id: "1408328851435556865" # 组织id
+    ]
+    id: 0
+    save:
+      orgId: data.id
+ # 进行停用组织
   - api: organizationService
     action: updateStatus
     actualParameterMap: [
-        id: "1400657314280640514",        # 组织id *
-        status: "00"   # 组织状态 *
+        id: "${0-orgId}",        # 组织id *
+        status: "01"   # 组织状态 *
     ]
-    id: 0
+    id: 1
     asserts:
       - actual: code
         matcher: equalTo
         expect: 0
-        reason: '修改组织状态基本检验！'
+        reason: '停用组织状态 基本检验！'
+  # 验证停用组织是否成功
+  - api: organizationService
+    action: getDetail
+    actualParameterMap: [
+        id: "${0=id}" # 组织id
+    ]
+    id: 2
+    save :
+      orgId: data.id
+    asserts:
+      - actual: data.status
+        matcher: equalTo
+        expect: ${1=status}
+        reason: '停用组织状态 状态验证！'
+  # 启用组织
+  - api: organizationService
+    action: updateStatus
+    actualParameterMap: [
+        id: "${2-orgId}",        # 组织id *
+        status: "01"   # 组织状态 *
+    ]
+    id: 3
+    asserts:
+      - actual: code
+        matcher: equalTo
+        expect: 0
+        reason: '启用组织状态 基本检验！'
+
+  # 验证启用组织是否成功
+  - api: organizationService
+    action: getDetail
+    actualParameterMap: [
+        id: "${0=id}" # 组织id
+    ]
+    id: 4
+    asserts:
+      - actual: data.status
+        matcher: equalTo
+        expect: ${3=status}
+        reason: '启用组织状态 状态验证！'

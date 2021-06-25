@@ -5,6 +5,7 @@ steps:
   - api: organizationService
     action: updateOrganization
     actualParameterMap: [
+        id: "1402791522469941249",
         orgId: "1402791349144522754",
         orgCode: "U0000260020010010002",
         address: "威新软件园8栋",   # 详细地址
@@ -12,14 +13,14 @@ steps:
         latitude: "116.313", # 纬度
         longitude: "116.313", # 经度
         orgName: "自动化编辑${getTimeStamp}",   # 组织名称
-        orgParentCode: "U000026",  # 上级组织编码
-        orgParentId: "1402575101446066177",   # 上级组织id
-        orgParentName: "金地集团", # 上级组织名称
+        orgParentCode: "U000026002001001",  # 上级组织编码
+        orgParentId: "1402582991254851586",   # 上级组织id
+        orgParentName: "科技片区", # 上级组织名称
         orgShortName: "银地",  # 组织简称
-        orgType: "01",    # 组织类型名称 00集团01区域公司02城市公司03片区04服务中心05职能部门
+        orgType: "04",    # 组织类型名称 00集团01区域公司02城市公司03片区04服务中心05职能部门
         phone: "13356464645",  # 电话
         regionCode: "8089031",   # 所在地区code
-        version: "null"   # 版本号
+        version: "3"   # 版本号
     ]
     id: 0
     asserts:

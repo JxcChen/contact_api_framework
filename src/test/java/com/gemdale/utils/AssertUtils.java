@@ -198,6 +198,8 @@ public class AssertUtils {
                 assertThat(assertModel.getReason(), response.path(assertModel.getActual()).toString(), equalTo(assertModel.getExpect()));
             }else if (assertModel.getMatcher().equals("containsString"))
                 assertThat(assertModel.getReason(), response.path(assertModel.getActual()).toString(),containsString(assertModel.getExpect()));
+            else if (assertModel.getMatcher().equals("notNull"))
+                assertThat(assertModel.getReason(), response.path(assertModel.getActual()) != null);
         });
     }
 }

@@ -65,6 +65,7 @@ actions:
   # 编辑组织
   updateOrganization:
     body: '{
+       "id": ${id},
        "orgId": "${orgId}",
        "orgCode": "${orgCOde}",
        "address": "${address}",
@@ -82,7 +83,7 @@ actions:
        "version": "${version}"
      }'
     headers:
-      content-type: application/json
+      content-type: application/json; charset=UTF-8
     post: /api/mdm/org/update
 
   # 修改组织状态

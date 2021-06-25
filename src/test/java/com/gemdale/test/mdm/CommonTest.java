@@ -28,16 +28,16 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class CommonTest {
     Logger logger = LoggerFactory.getLogger(CommonTest.class);
 
-    @Description("公共接口相关测试用例")
-    @ParameterizedTest
-    @MethodSource
-    void commonTest(TestcaseModel testcaseModel, String name, String description) throws Exception {
-        logger.info("【用例开始执行】");
-        logger.info("用例名称： " + name);
-        logger.info("用例描述： " + description);
-        testcaseModel.run();
-        logger.info("debug");
-    }
+//    @Description("公共接口相关测试用例")
+//    @ParameterizedTest
+//    @MethodSource
+//    void commonTest(TestcaseModel testcaseModel, String name, String description) throws Exception {
+//        logger.info("【用例开始执行】");
+//        logger.info("用例名称： " + name);
+//        logger.info("用例描述： " + description);
+//        testcaseModel.run();
+//        logger.info("debug");
+//    }
 
 
 //    public static ArrayList<Arguments> commonTest(){

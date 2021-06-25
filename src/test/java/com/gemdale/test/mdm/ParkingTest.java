@@ -27,11 +27,11 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
  * @Description: TODO
  */
 @Epic("基础数据平台")
-@Feature("房产相关用例")
+@Feature("车位相关用例")
 public class ParkingTest {
     Logger logger = LoggerFactory.getLogger(ParkingTest.class);
 
-    @Description("房产相关测试用例")
+    @Description("车位相关测试用例")
     @ParameterizedTest
     @MethodSource
     void parkingTest(TestcaseModel testcaseModel, String name, String description) throws Exception {
@@ -129,7 +129,7 @@ public class ParkingTest {
 
 
     /**
-     * 导出房产数据
+     * 导出车位数据
      */
 //    public static ArrayList<Arguments> parkingTest() throws Exception {
 //        ApiLoader.load(Constant.MDM_API_DIR);
